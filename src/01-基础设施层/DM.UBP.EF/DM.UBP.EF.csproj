@@ -161,10 +161,6 @@
       <Project>{6d8ad002-4071-4094-803a-c25eb7e9c786}</Project>
       <Name>Abp.Zero</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\02-领域层\DM.UBP.Domain.Core\DM.UBP.Domain.Service.csproj">
-      <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
-      <Name>DM.UBP.Domain.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\02-领域层\DM.UBP.Domain.Entity\DM.UBP.Domain.Entity.csproj">
       <Project>{d0f6b7da-08a0-472b-ad15-3f9878439467}</Project>
       <Name>DM.UBP.Domain.Entity</Name>

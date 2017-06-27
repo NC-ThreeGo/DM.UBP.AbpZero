@@ -85,10 +85,6 @@
       <Project>{3979f157-deb0-4878-ab1d-4cef6b5a1300}</Project>
       <Name>DM.UBP.EF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DM.UBP.Domain.Core\DM.UBP.Domain.Service.csproj">
-      <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
-      <Name>DM.UBP.Domain.Service</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DM.UBP.Domain.Entity\DM.UBP.Domain.Entity.csproj">
       <Project>{d0f6b7da-08a0-472b-ad15-3f9878439467}</Project>
       <Name>DM.UBP.Domain.Entity</Name>
