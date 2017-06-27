@@ -11,7 +11,7 @@ namespace DM.UBP.EF.Migrations
     /// <summary>
     /// 数据迁移配置基类
     /// </summary>
-    public abstract class MigrationsConfigurationWithSeedBase<TDbContext> : DbMigrationsConfiguration<TDbContext> where TDbContext : DbContext
+    public abstract class MigrationsConfigurationWithSeedBase<TDbContext> : DbMigrationsConfiguration<TDbContext> where TDbContext : UbpDbContext
     {
         /// <summary>
         /// 初始化一个<see cref="MigrationsConfigurationWithSeedBase{TDbContext}"/>类型的新实例

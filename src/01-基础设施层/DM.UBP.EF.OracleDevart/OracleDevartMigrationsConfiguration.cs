@@ -17,7 +17,8 @@ namespace DM.UBP.EF.OracleDevart
 
             InintDevartOracle();
 
-            SeedActions.Add(new MigrationsSeedAction());
+            //SeedActions.Add(new MigrationsSeedAction());
+            SeedActions.Add(new CreateDatabaseSeedAction());
         }
 
         private void InintDevartOracle()

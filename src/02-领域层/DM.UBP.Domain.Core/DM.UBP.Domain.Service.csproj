@@ -108,9 +108,77 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SysManage\Authorization\Modules\IModuleManagercs.cs" />
+    <Compile Include="SysManage\Authorization\Modules\ModuleManager.cs" />
+    <Compile Include="SysManage\Folders\AppFolders.cs" />
+    <Compile Include="SysManage\Folders\IAppFolders.cs" />
+    <Compile Include="UbpDomainServiceBase.cs" />
     <Compile Include="Localization\CultureHelper.cs" />
+    <Compile Include="SysManage\Authorization\AppAuthorizationProvider.cs" />
+    <Compile Include="SysManage\Authorization\AppPermissions.cs" />
+    <Compile Include="SysManage\Authorization\Impersonation\ImpersonationCacheItem.cs" />
+    <Compile Include="SysManage\Authorization\Impersonation\ImpersonationCacheManagerExtensions.cs" />
+    <Compile Include="SysManage\Authorization\Ldap\AppLdapAuthenticationSource.cs" />
+    <Compile Include="SysManage\Authorization\PermissionChecker.cs" />
+    <Compile Include="SysManage\Authorization\Roles\AppRoleConfig.cs" />
+    <Compile Include="SysManage\Authorization\Roles\RoleManager.cs" />
+    <Compile Include="SysManage\Authorization\Roles\RoleStore.cs" />
+    <Compile Include="SysManage\Authorization\Roles\StaticRoleNames.cs" />
+    <Compile Include="SysManage\Authorization\Users\IUserEmailer.cs" />
+    <Compile Include="SysManage\Authorization\Users\IUserLinkManager.cs" />
+    <Compile Include="SysManage\Authorization\Users\IUserLogoutInformer.cs" />
+    <Compile Include="SysManage\Authorization\Users\IUserPolicy.cs" />
+    <Compile Include="SysManage\Authorization\Users\SwitchToLinkedAccountCacheItem.cs" />
+    <Compile Include="SysManage\Authorization\Users\SwitchToLinkedAccountCacheManagerExtensions.cs" />
+    <Compile Include="SysManage\Authorization\Users\UserEmailer.cs" />
+    <Compile Include="SysManage\Authorization\Users\UserLinkManager.cs" />
+    <Compile Include="SysManage\Authorization\Users\UserManager.cs" />
+    <Compile Include="SysManage\Authorization\Users\UserPolicy.cs" />
+    <Compile Include="SysManage\Authorization\Users\UserStore.cs" />
+    <Compile Include="SysManage\Chat\ChatFeatureChecker.cs" />
+    <Compile Include="SysManage\Chat\ChatMessageManager.cs" />
+    <Compile Include="SysManage\Chat\IChatCommunicator.cs" />
+    <Compile Include="SysManage\Chat\IChatFeatureChecker.cs" />
+    <Compile Include="SysManage\Chat\IChatMessageManager.cs" />
+    <Compile Include="SysManage\Chat\NullChatCommunicator.cs" />
+    <Compile Include="SysManage\Configuration\AppSettingProvider.cs" />
+    <Compile Include="SysManage\Configuration\AppSettings.cs" />
+    <Compile Include="SysManage\Debugging\DebugHelper.cs" />
+    <Compile Include="SysManage\Editions\EditionManager.cs" />
+    <Compile Include="SysManage\Editions\FeatureValueStore.cs" />
+    <Compile Include="SysManage\Emailing\EmailTemplateProvider.cs" />
+    <Compile Include="SysManage\Emailing\IEmailTemplateProvider.cs" />
+    <Compile Include="SysManage\Features\AppFeatureProvider.cs" />
+    <Compile Include="SysManage\Features\AppFeatures.cs" />
+    <Compile Include="SysManage\Friendships\Cache\FriendCacheItem.cs" />
+    <Compile Include="SysManage\Friendships\Cache\FriendCacheItemExtensions.cs" />
+    <Compile Include="SysManage\Friendships\Cache\IUserFriendsCache.cs" />
+    <Compile Include="SysManage\Friendships\Cache\UserFriendCacheSyncronizer.cs" />
+    <Compile Include="SysManage\Friendships\Cache\UserFriendsCache.cs" />
+    <Compile Include="SysManage\Friendships\Cache\UserWithFriendsCacheItem.cs" />
+    <Compile Include="SysManage\Friendships\ChatUserStateWatcher.cs" />
+    <Compile Include="SysManage\Friendships\FriendshipExtensions.cs" />
+    <Compile Include="SysManage\Friendships\FriendshipManager.cs" />
+    <Compile Include="SysManage\Friendships\IFriendshipManager.cs" />
+    <Compile Include="SysManage\Identity\IdentitySmsMessageService.cs" />
+    <Compile Include="SysManage\MultiTenancy\Demo\RandomUserGenerator.cs" />
+    <Compile Include="SysManage\MultiTenancy\Demo\TenantDemoDataBuilder.cs" />
+    <Compile Include="SysManage\MultiTenancy\TenantManager.cs" />
+    <Compile Include="SysManage\Notifications\AppNotificationNames.cs" />
+    <Compile Include="SysManage\Notifications\AppNotificationProvider.cs" />
+    <Compile Include="SysManage\Notifications\AppNotifier.cs" />
+    <Compile Include="SysManage\Notifications\IAppNotifier.cs" />
+    <Compile Include="SysManage\Security\PasswordComplexityChecker.cs" />
+    <Compile Include="SysManage\Security\PasswordComplexitySetting.cs" />
+    <Compile Include="SysManage\Storage\DbBinaryObjectManager.cs" />
+    <Compile Include="SysManage\Storage\IBinaryObjectManager.cs" />
+    <Compile Include="SysManage\Timing\ITimeZoneService.cs" />
+    <Compile Include="SysManage\Timing\TimeZoneService.cs" />
+    <Compile Include="SysManage\Validation\ValidationHelper.cs" />
+    <Compile Include="SysManage\Web\IWebUrlService.cs" />
+    <Compile Include="SysManage\Web\WebUrlService.cs" />
     <Compile Include="UbpConsts.cs" />
-    <Compile Include="UbpDomainCoreModule.cs" />
+    <Compile Include="UbpDomainServiceModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -118,6 +186,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\aspnetboilerplate\src\Abp.AutoMapper\Abp.AutoMapper.csproj">
+      <Project>{7334aff5-cf42-4922-8f79-e74fcd8693a5}</Project>
+      <Name>Abp.AutoMapper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\aspnetboilerplate\src\Abp\Abp.csproj">
       <Project>{be9aca26-9c1b-4975-9aad-bdd48de84eb8}</Project>
       <Name>Abp</Name>
@@ -125,6 +197,10 @@
     <ProjectReference Include="..\..\..\..\module-zero\src\Abp.Zero.Common\Abp.Zero.Common.csproj">
       <Project>{362af84e-4d6b-4a8b-a111-91620c1f1e50}</Project>
       <Name>Abp.Zero.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\module-zero\src\Abp.Zero.Ldap\Abp.Zero.Ldap.csproj">
+      <Project>{38828888-4227-4c85-a751-11370197bc22}</Project>
+      <Name>Abp.Zero.Ldap</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\module-zero\src\Abp.Zero\Abp.Zero.csproj">
       <Project>{6d8ad002-4071-4094-803a-c25eb7e9c786}</Project>
@@ -150,6 +226,7 @@
     <Content Include="Localization\Source\UBP-zh-CN.xml" />
     <Content Include="Localization\Source\UBP.xml" />
     <Content Include="Localization\Source\READ_ME.txt" />
+    <Content Include="SysManage\Emailing\EmailTemplates\default.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

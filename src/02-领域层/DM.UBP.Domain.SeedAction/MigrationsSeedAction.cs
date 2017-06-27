@@ -1,10 +1,15 @@
-﻿using DM.UBP.EF.Migrations;
+﻿using Abp.MultiTenancy;
+using Abp.Zero.EntityFramework;
+using DM.UBP.EF;
+using DM.UBP.EF.Migrations;
 using System.Data.Entity;
 
 namespace DM.UBP.Domain.SeedAction
 {
-    public class MigrationsSeedAction : ISeedAction
+    public class MigrationsSeedAction : ISeedAction, IMultiTenantSeed
     {
+        public AbpTenantBase Tenant { get; set; }
+
         #region Implementation of ISeedAction
 
         /// <summary>
@@ -16,7 +21,7 @@ namespace DM.UBP.Domain.SeedAction
         /// 定义种子数据初始化过程
         /// </summary>
         /// <param name="context">数据上下文</param>
-        public void Action(DbContext context)
+        public void Action(UbpDbContext context)
         {
             //if (context.Set<Role>().Count(p => p.Name == "系统管理员") == 0)
             //    context.Set<Role>().AddOrUpdate(new Role() { Name = "系统管理员", Remark = "系统管理员角色，拥有系统最高权限", IsAdmin = true, IsSystem = true, CreatedTime = DateTime.Now });

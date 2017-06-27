@@ -1,14 +1,14 @@
 ﻿using Abp.Zero.EntityFramework;
+using DM.UBP.Domain.Entity.SysManage.Authorization;
+using DM.UBP.Domain.Entity.SysManage.MultiTenancy;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
-//using DM.UBP.Domain.Entity.BaseManage.MultiTenancy;
-//using DM.UBP.Domain.Entity.BaseManage.Permission;
 
 namespace DM.UBP.EF
 {
-    public partial class UbpDbContext : Abp.EntityFramework.AbpDbContext    //AbpZeroDbContext<Tenant, Role, User>
+    public partial class UbpDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for each Entity...
         /// <summary>

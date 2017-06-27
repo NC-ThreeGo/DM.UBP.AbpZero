@@ -21,6 +21,6 @@ namespace DM.UBP.EF.Migrations
         /// 定义种子数据初始化过程
         /// </summary>
         /// <param name="context">数据上下文</param>
-        void Action(DbContext context);
+        void Action(UbpDbContext context);
     }
 }

@@ -1,10 +1,22 @@
-﻿using DM.UBP.EF.Migrations;
+﻿using Abp.Events.Bus;
+using Abp.Events.Bus.Entities;
+using Abp.MultiTenancy;
+using Abp.Zero.EntityFramework;
+using DM.UBP.Domain.Entity.SysManage.MultiTenancy;
+using DM.UBP.Domain.SeedAction.SeedData;
+using DM.UBP.Domain.SeedAction.SeedData.Host;
+using DM.UBP.Domain.SeedAction.SeedData.Tenants;
+using DM.UBP.EF;
+using DM.UBP.EF.Migrations;
+using EntityFramework.DynamicFilters;
 using System.Data.Entity;
 
 namespace DM.UBP.Domain.SeedAction
 {
-    public class CreateDatabaseSeedAction : ISeedAction
+    public class CreateDatabaseSeedAction : ISeedAction, IMultiTenantSeed
     {
+        public AbpTenantBase Tenant { get; set; }
+
         #region Implementation of ISeedAction
 
         /// <summary>
@@ -16,28 +28,28 @@ namespace DM.UBP.Domain.SeedAction
         /// 定义种子数据初始化过程
         /// </summary>
         /// <param name="context">数据上下文</param>
-        public void Action(DbContext context)
+        public void Action(UbpDbContext context)
         {
-            //context.Set<Role>().Add(new Role() { Name = "系统管理员", Remark = "系统管理员角色，拥有系统最高权限", IsAdmin = true, IsSystem = true, CreatedTime = DateTime.Now });
-            //context.Set<User>().Add(new User()
-            //{
-            //    UserName = "admin",
-            //    NickName = "系统管理员",
-            //    Email = "admin@threego.com",
-            //    EmailConfirmed = false,
-            //    PasswordHash = "AFJuxDmNkeA5Rg+djBwaDDhJFCEPC5fts9HtkV2zsu5q9L9OfPQ3sLmbIKJpGNlPCQ==",
-            //    PhoneNumberConfirmed = false,
-            //    TwoFactorEnabled = false,
-            //    LockoutEnabled = true
-            //});
+            context.DisableAllFilters();
 
+            context.EntityChangeEventHelper = NullEntityChangeEventHelper.Instance;
+            context.EventBus = NullEventBus.Instance;
 
-            //Host seed
-            //new InitialHostDbBuilder(context).Create();
+            if (Tenant == null)
+            {
+                //Host seed
+                new InitialHostDbBuilder(context).Create();
 
-            //Default tenant seed (in host database).
-            //new DefaultTenantCreator(context).Create();
-            //new TenantRoleAndUserBuilder(context, 1).Create();
+                //Default tenant seed (in host database).
+                new DefaultTenantBuilder(context).Create();
+                new TenantRoleAndUserBuilder(context, 1).Create();
+            }
+            else
+            {
+                //You can add seed for tenant databases using Tenant property...
+            }
+
+            context.SaveChanges();
         }
 
         #endregion

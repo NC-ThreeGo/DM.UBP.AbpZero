@@ -10,7 +10,7 @@ namespace DM.UBP.EF.Migrations
     /// <summary>
     /// 在数据库不存在时使用种子数据创建数据库
     /// </summary>
-    public abstract class CreateDatabaseIfNotExistsWithSeedBase<TDbContext> : CreateDatabaseIfNotExists<TDbContext> where TDbContext : DbContext
+    public abstract class CreateDatabaseIfNotExistsWithSeedBase<TDbContext> : CreateDatabaseIfNotExists<TDbContext> where TDbContext : UbpDbContext
     {
         /// <summary>
         /// 初始化一个<see cref="CreateDatabaseIfNotExistsWithSeedBase{TDbContext}"/>类型的新实例

@@ -44,8 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SysManage\Authorization\Role.cs" />
+    <Compile Include="SysManage\Authorization\User.cs" />
+    <Compile Include="SysManage\Chat\ChatMessage.cs" />
+    <Compile Include="SysManage\Chat\ChatMessageReadState.cs" />
+    <Compile Include="SysManage\Chat\ChatSide.cs" />
+    <Compile Include="SysManage\Friendships\Friendship.cs" />
+    <Compile Include="SysManage\Friendships\FriendshipState.cs" />
+    <Compile Include="SysManage\MultiTenancy\Tenant.cs" />
+    <Compile Include="SysManage\Authorization\Module.cs" />
+    <Compile Include="SysManage\Authorization\ModuleColumnFilter.cs" />
+    <Compile Include="SysManage\Authorization\ModuleOperate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringMaxLengthConst.cs" />
+    <Compile Include="SysManage\Storage\BinaryObject.cs" />
     <Compile Include="UbpDomainEntityModule.cs" />
   </ItemGroup>
   <ItemGroup>
