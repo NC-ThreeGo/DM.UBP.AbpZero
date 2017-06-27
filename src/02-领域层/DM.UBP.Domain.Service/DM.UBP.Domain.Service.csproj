@@ -108,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UbpServiceBase.cs" />
     <Compile Include="SysManage\Authorization\Modules\IModuleManagercs.cs" />
     <Compile Include="SysManage\Authorization\Modules\ModuleManager.cs" />
     <Compile Include="SysManage\Folders\AppFolders.cs" />

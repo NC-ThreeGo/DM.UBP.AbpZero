@@ -3,6 +3,7 @@ using Abp.Modules;
 using DM.UBP.Domain.Service;
 using Abp.AutoMapper;
 using DM.UBP.Application.Dto;
+using DM.UBP.Domain.Service.SysManage.Authorization;
 
 namespace DM.UBP.Application.Service
 {
@@ -11,6 +12,9 @@ namespace DM.UBP.Application.Service
     {
         public override void PreInitialize()
         {
+            //Adding authorization providers
+            Configuration.Authorization.Providers.Add<AppAuthorizationProvider>();
+
             Configuration.Modules.AbpAutoMapper().Configurators.Add(mapper =>
             {
                 //Add your custom AutoMapper mappings here...
