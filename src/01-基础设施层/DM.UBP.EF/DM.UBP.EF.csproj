@@ -165,6 +165,10 @@
       <Project>{d0f6b7da-08a0-472b-ad15-3f9878439467}</Project>
       <Name>DM.UBP.Domain.Entity</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\02-领域层\DM.UBP.Domain.Service\DM.UBP.Domain.Service.csproj">
+      <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
+      <Name>DM.UBP.Domain.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DM.Common\DM.Common.csproj">
       <Project>{d3c43dfa-4bc8-4daa-83a4-51d0000e788c}</Project>
       <Name>DM.Common</Name>

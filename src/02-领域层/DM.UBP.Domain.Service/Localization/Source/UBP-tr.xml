@@ -100,12 +100,12 @@
     <text name="Send" value="Gönder" />
     <text name="PasswordReset" value="Password reset" />
     <text name="InvalidUserNameOrEmailAddress" value="Geçersiz kullanıcı adı ya da email adresi" />
-    <text name="PasswordResetEmail_Subject" value="AbpZeroTemplate şifre sıfırlama" />
-    <text name="PasswordResetEmail_Title" value="AbpZeroTemplate şifre sıfırlama." />
+    <text name="PasswordResetEmail_Subject" value="DM.UBP şifre sıfırlama" />
+    <text name="PasswordResetEmail_Title" value="DM.UBP şifre sıfırlama." />
     <text name="PasswordResetEmail_SubTitle" value="Bu email, şifrenizi sıfırlamak ve yeniden oluşturmak için gönderilmiştir." />
     <text name="PasswordResetEmail_ClickTheLinkBelowToResetYourPassword" value="Şifrenizi sıfırlamak için aşağıdaki bağlantıya tıklayın:" />
-    <text name="EmailActivation_Subject" value="AbpZeroTemplate email etkinleştirme" />
-    <text name="EmailActivation_Title" value="AbpZeroTemplate hoşgeldiniz." />
+    <text name="EmailActivation_Subject" value="DM.UBP email etkinleştirme" />
+    <text name="EmailActivation_Title" value="DM.UBP hoşgeldiniz." />
     <text name="EmailActivation_SubTitle" value="Bu email, email adresinizi doğrulamak için gönderilmiştir." />
     <text name="EmailActivation_ClickTheLinkBelowToVerifyYourEmail" value="Lütfen aşağıdaki bağlantıyı tıklayarak email adresinizi doğrulayın:" />
     <text name="InvalidEmailAddress" value="Geçersiz e-posta adresi" />
@@ -328,7 +328,7 @@
     <text name="SuccessfullyUnlinked">Bağlantı başarıyla kaldırıldı.</text>
     <text name="LinkedUserDeleteWarningMessage">{0} kullanıcısına bağlantı silinecektir.</text>
     <text name="SwitchToLinkedAccountTokenErrorMessage" value="Bağlı hesaba geçme kodu geçersiz ya da süresi dolmuş!" />
-    <text name="WelcomeToTheApplicationNotificationMessage" value="AbpZeroTemplate uygulamasına Hoşgeldiniz! Bilgilendirme sistemi sizi ilgilendiğiniz olaylar hakkında anında bilgilendirmek için geliştirilmiştir. Bildirim ayarları kısmından ne tür bilgilendirme almak istediğinizi ayarlayabilirsiniz." />
+    <text name="WelcomeToTheApplicationNotificationMessage" value="DM.UBP uygulamasına Hoşgeldiniz! Bilgilendirme sistemi sizi ilgilendiğiniz olaylar hakkında anında bilgilendirmek için geliştirilmiştir. Bildirim ayarları kısmından ne tür bilgilendirme almak istediğinizi ayarlayabilirsiniz." />
     <text name="NewUserRegisteredNotificationDefinition" value="Yeni bir kullanıcı kaydolduğunda." />
     <text name="NewUserRegisteredNotificationMessage" value="Yeni bir kullanıcı kaydoldu. Kullanıcı adı: {userName}, e-posta adresi: {emailAddress}." />
     <text name="SeeAllNotifications" value="Tüm bildirimleri gör" />
@@ -354,7 +354,7 @@
     <text name="CachesHeaderInfo">Uygulamadaki önbellekleri bu sayfada temizleyebilirsiniz.</text>
     <text name="TestEmailSettingsHeader">E-posta Ayarlarını Test Et</text>
     <text name="SendTestEmail">Test E-postası Gönder</text>
-    <text name="TestEmail_Subject">AbpZeroTemplate test maili</text>
+    <text name="TestEmail_Subject">DM.UBP test maili</text>
     <text name="TestEmail_Body">Bu bir test mailidir.</text>
     <text name="TestEmailSentSuccessfully">Test e-postası başarıyla gönderildi.</text>
     <text name="WebSiteLogs">Websitesi Logları</text>

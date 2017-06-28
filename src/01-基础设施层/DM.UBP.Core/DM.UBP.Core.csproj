@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppVersionHelper.cs" />
     <Compile Include="Config\DbContextInitializerConfig.cs" />
     <Compile Include="Config\DbContextInitializerElement.cs" />
     <Compile Include="Config\IDbContextInitializerConfigReseter.cs" />

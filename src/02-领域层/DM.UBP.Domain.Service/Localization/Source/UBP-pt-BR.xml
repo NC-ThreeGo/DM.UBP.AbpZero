@@ -100,12 +100,12 @@
     <text name="Send" value="Enviar" />
     <text name="PasswordReset" value="Resetar senha" />
     <text name="InvalidUserNameOrEmailAddress" value="Nome de usuário ou email inválidos" />
-    <text name="PasswordResetEmail_Subject" value="AbpZeroTemplate resetar senha" />
-    <text name="PasswordResetEmail_Title" value="AbpZeroTemplate resetar senha." />
+    <text name="PasswordResetEmail_Subject" value="DM.UBP resetar senha" />
+    <text name="PasswordResetEmail_Title" value="DM.UBP resetar senha." />
     <text name="PasswordResetEmail_SubTitle" value="Esse email é enviado para você para resetar e recriar sua senha." />
     <text name="PasswordResetEmail_ClickTheLinkBelowToResetYourPassword" value="Por favor, clique no link abaixo para resetar a senha:" />
-    <text name="EmailActivation_Subject" value="AbpZeroTemplate email de ativação de conta" />
-    <text name="EmailActivation_Title" value="Bem vindo ao AbpZeroTemplate." />
+    <text name="EmailActivation_Subject" value="DM.UBP email de ativação de conta" />
+    <text name="EmailActivation_Title" value="Bem vindo ao DM.UBP." />
     <text name="EmailActivation_SubTitle" value="Esse email é enviado para verificar seu endereço de email." />
     <text name="EmailActivation_ClickTheLinkBelowToVerifyYourEmail" value="Por favor clique no link abaixo para verificar seu endereço de email:" />
     <text name="InvalidEmailAddress" value="Endereço de email inválido" />

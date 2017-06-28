@@ -100,12 +100,12 @@
     <text name="Send">إرسال</text>
     <text name="PasswordReset">إعادة تعيين كلمة المرور</text>
     <text name="InvalidUserNameOrEmailAddress">اسم المستخدم أو البريد الإلكتروني غير صحيح</text>
-    <text name="PasswordResetEmail_Subject">إعادة تعيين كلمة المرور AbpZeroTemplate</text>
-    <text name="PasswordResetEmail_Title">إعادة تعيين كلمة المرور AbpZeroTemplate</text>
+    <text name="PasswordResetEmail_Subject">إعادة تعيين كلمة المرور DM.UBP</text>
+    <text name="PasswordResetEmail_Title">إعادة تعيين كلمة المرور DM.UBP</text>
     <text name="PasswordResetEmail_SubTitle">.تم إرسال هذا البريد الإلكتروني لك لإعادة تعيين كلمة المرور</text>
     <text name="PasswordResetEmail_ClickTheLinkBelowToResetYourPassword">يرجى الضغط على الرابط بالأسفل لإعادة تعيين كلمة المرور.</text>
-    <text name="EmailActivation_Subject">AbpZeroTemplate تفعيل حساب</text>
-    <text name="EmailActivation_Title">AbpZeroTemplate مرحبا بك في</text>
+    <text name="EmailActivation_Subject">DM.UBP تفعيل حساب</text>
+    <text name="EmailActivation_Title">DM.UBP مرحبا بك في</text>
     <text name="EmailActivation_SubTitle">تم إرسال هذه الرساله لتأكيد بريدك الإلكتروني.</text>
     <text name="EmailActivation_ClickTheLinkBelowToVerifyYourEmail">يرجى الضغط على الرابط أدناه لتأكيد البريد الإلكتروني:</text>
     <text name="InvalidEmailAddress">البريدالالكتروني غير صحيح</text>
@@ -323,7 +323,7 @@
     <text name="SuccessfullyUnlinked">تم إزالة الربط بنجاح.</text>
     <text name="LinkedUserDeleteWarningMessage">سيتم إزالة الربط بالمستخدم {0}</text>
     <text name="SwitchToLinkedAccountTokenErrorMessage" value="رمز التمثيل غير صالح أو منتهية صلاحيتة!" />
-    <text name="WelcomeToTheApplicationNotificationMessage" value="أهلا و سهلا بك لنظام AbpZeroTemplate! للإخطارات. نظام الإخطارات يستخدم لإعلامك عن إخطارات من النظام أو المستخدمين . يمكنك إختيار نوع الإخطارات التي تريد أن تتلقاها من خلال إعادات الإخطارات." />
+    <text name="WelcomeToTheApplicationNotificationMessage" value="أهلا و سهلا بك لنظام DM.UBP! للإخطارات. نظام الإخطارات يستخدم لإعلامك عن إخطارات من النظام أو المستخدمين . يمكنك إختيار نوع الإخطارات التي تريد أن تتلقاها من خلال إعادات الإخطارات." />
     <text name="NewUserRegisteredNotificationDefinition" value="عند إنشاء حساب مستخدم جديد بالنظام." />
     <text name="NewUserRegisteredNotificationMessage" value="تم إنشاء حساب جديد بالنظام. المستخدم: {userName}, البريد الالكتروني: {emailAddress}." />
     <text name="SeeAllNotifications" value="جميع الإخطارات" />

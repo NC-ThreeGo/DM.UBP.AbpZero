@@ -81,6 +81,10 @@
       <Project>{6d8ad002-4071-4094-803a-c25eb7e9c786}</Project>
       <Name>Abp.Zero</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\01-基础设施层\DM.UBP.Core\DM.UBP.Core.csproj">
+      <Project>{4FE341BF-8422-4DF3-8EFA-DD5187032F70}</Project>
+      <Name>DM.UBP.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\01-基础设施层\DM.UBP.EF\DM.UBP.EF.csproj">
       <Project>{3979f157-deb0-4878-ab1d-4cef6b5a1300}</Project>
       <Name>DM.UBP.EF</Name>
@@ -88,6 +92,10 @@
     <ProjectReference Include="..\DM.UBP.Domain.Entity\DM.UBP.Domain.Entity.csproj">
       <Project>{d0f6b7da-08a0-472b-ad15-3f9878439467}</Project>
       <Name>DM.UBP.Domain.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DM.UBP.Domain.Service\DM.UBP.Domain.Service.csproj">
+      <Project>{17298ea0-af73-4f30-b6f1-2066100d7d74}</Project>
+      <Name>DM.UBP.Domain.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

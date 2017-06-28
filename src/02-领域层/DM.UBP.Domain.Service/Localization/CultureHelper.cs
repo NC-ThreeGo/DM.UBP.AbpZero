@@ -1,6 +1,6 @@
 ﻿using System.Threading;
 
-namespace DM.UBP.Domain.Core.Localization
+namespace DM.UBP.Domain.Service.Localization
 {
     public static class CultureHelper
     {

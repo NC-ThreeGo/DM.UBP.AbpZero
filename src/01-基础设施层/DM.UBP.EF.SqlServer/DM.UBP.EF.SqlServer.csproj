@@ -65,6 +65,10 @@
       <Project>{cba073dd-12e0-4ffa-b910-38b4824b5b59}</Project>
       <Name>DM.UBP.Domain.SeedAction</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DM.UBP.Core\DM.UBP.Core.csproj">
+      <Project>{4FE341BF-8422-4DF3-8EFA-DD5187032F70}</Project>
+      <Name>DM.UBP.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DM.UBP.EF\DM.UBP.EF.csproj">
       <Project>{3979f157-deb0-4878-ab1d-4cef6b5a1300}</Project>
       <Name>DM.UBP.EF</Name>

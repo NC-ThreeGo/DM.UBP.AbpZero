@@ -103,12 +103,12 @@
     <text name="Send" value="Invio" />
     <text name="PasswordReset" value="Reimposta password" />
     <text name="InvalidUserNameOrEmailAddress" value="Nome utente o indirizzo email non validi" />
-    <text name="PasswordResetEmail_Subject" value="AbpZeroTemplate reimpostazione password" />
-    <text name="PasswordResetEmail_Title" value="AbpZeroTemplate reset password." />
+    <text name="PasswordResetEmail_Subject" value="DM.UBP reimpostazione password" />
+    <text name="PasswordResetEmail_Title" value="DM.UBP reset password." />
     <text name="PasswordResetEmail_SubTitle" value="Questa mail ti è stata inviata per resettare e ri-creare la tua password." />
     <text name="PasswordResetEmail_ClickTheLinkBelowToResetYourPassword" value="Clicca sul link sotto per resettare la password:" />
-    <text name="EmailActivation_Subject" value="AbpZeroTemplate attivazione utente" />
-    <text name="EmailActivation_Title" value="Benvenuto in AbpZeroTemplate." />
+    <text name="EmailActivation_Subject" value="DM.UBP attivazione utente" />
+    <text name="EmailActivation_Title" value="Benvenuto in DM.UBP." />
     <text name="EmailActivation_SubTitle" value="Questa mail ti è stata inviata per verificare la tua email." />
     <text name="EmailActivation_ClickTheLinkBelowToVerifyYourEmail" value="Per favore clicca il link sottostante per verificare la tua email:" />
     <text name="InvalidEmailAddress" value="Indirizzo email non valido" />
@@ -302,7 +302,7 @@
     <text name="SuccessfullyUnlinked" value="Correttamente collegato" />
     <text name="LinkedUserDeleteWarningMessage" value="Il collegamento all'utente {0} verrà cancellato." />
     <text name="SwitchToLinkedAccountTokenErrorMessage" value="Token per impersonare non valido o scaduto!" />
-    <text name="WelcomeToTheApplicationNotificationMessage" value="Benvenuto in AbpZeroTemplate! Il sistema delle notifiche viene utilizzato per la gestione degli eventi. Puoi selezionare le notifiche da ricevere dalla gestione delle notifiche." />
+    <text name="WelcomeToTheApplicationNotificationMessage" value="Benvenuto in DM.UBP! Il sistema delle notifiche viene utilizzato per la gestione degli eventi. Puoi selezionare le notifiche da ricevere dalla gestione delle notifiche." />
     <text name="NewUserRegisteredNotificationDefinition" value="Un nuovo utente si è registrato nella piattaforma." />
     <text name="NewUserRegisteredNotificationMessage" value="Un nuovo utente si è registrato alla piattaforma. Nome utente: {userName}, indirizzo email:{emailAddress}." />
     <text name="SeeAllNotifications" value="Visualizza tutte le notifiche" />

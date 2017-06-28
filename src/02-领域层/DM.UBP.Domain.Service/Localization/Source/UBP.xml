@@ -100,12 +100,12 @@
     <text name="Send" value="Send" />
     <text name="PasswordReset" value="Password reset" />
     <text name="InvalidUserNameOrEmailAddress" value="Invalid user name or email address" />
-    <text name="PasswordResetEmail_Subject" value="AbpZeroTemplate password reset" />
-    <text name="PasswordResetEmail_Title" value="AbpZeroTemplate password reset." />
+    <text name="PasswordResetEmail_Subject" value="DM.UBP password reset" />
+    <text name="PasswordResetEmail_Title" value="DM.UBP password reset." />
     <text name="PasswordResetEmail_SubTitle" value="This email is sent you to reset and re-create your password." />
     <text name="PasswordResetEmail_ClickTheLinkBelowToResetYourPassword" value="Please click the link below to reset your password:" />
-    <text name="EmailActivation_Subject" value="AbpZeroTemplate account email activation" />
-    <text name="EmailActivation_Title" value="Welcome to AbpZeroTemplate." />
+    <text name="EmailActivation_Subject" value="DM.UBP account email activation" />
+    <text name="EmailActivation_Title" value="Welcome to DM.UBP." />
     <text name="EmailActivation_SubTitle" value="This email is sent you to verify your email." />
     <text name="EmailActivation_ClickTheLinkBelowToVerifyYourEmail" value="Please click the link below to verify your email address:" />
     <text name="InvalidEmailAddress" value="Invalid email address" />
@@ -328,7 +328,7 @@
     <text name="SuccessfullyUnlinked">Successfully unlinked</text>
     <text name="LinkedUserDeleteWarningMessage">Link to user {0} will be deleted.</text>
     <text name="SwitchToLinkedAccountTokenErrorMessage" value="Impersonation token is invalid or expired!" />
-    <text name="WelcomeToTheApplicationNotificationMessage" value="Welcome to AbpZeroTemplate! Notification system is used to inform you for intended events. You can select which type of notifications you want to receive from the notification settings." />
+    <text name="WelcomeToTheApplicationNotificationMessage" value="Welcome to DM.UBP! Notification system is used to inform you for intended events. You can select which type of notifications you want to receive from the notification settings." />
     <text name="NewUserRegisteredNotificationDefinition" value="On a new user registered to the application." />
     <text name="NewUserRegisteredNotificationMessage" value="A new user registered to the application. User name: {userName}, Email address: {emailAddress}." />
     <text name="SeeAllNotifications" value="See all notifications" />
@@ -354,7 +354,7 @@
     <text name="CachesHeaderInfo">You can clear caches in application on this page.</text>
     <text name="TestEmailSettingsHeader">Test Email Settings</text>
     <text name="SendTestEmail">Send Test Email</text>
-    <text name="TestEmail_Subject">AbpZeroTemplate test email</text>
+    <text name="TestEmail_Subject">DM.UBP test email</text>
     <text name="TestEmail_Body">This is a test email.</text>
     <text name="TestEmailSentSuccessfully">Test e-mail sent successfully.</text>
     <text name="WebSiteLogs">Website Logs</text>
