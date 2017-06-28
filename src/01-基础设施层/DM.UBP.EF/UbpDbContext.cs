@@ -1,6 +1,9 @@
 ﻿using Abp.Zero.EntityFramework;
 using DM.UBP.Domain.Entity.SysManage.Authorization;
+using DM.UBP.Domain.Entity.SysManage.Chat;
+using DM.UBP.Domain.Entity.SysManage.Friendships;
 using DM.UBP.Domain.Entity.SysManage.MultiTenancy;
+using DM.UBP.Domain.Entity.SysManage.Storage;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
@@ -11,6 +14,12 @@ namespace DM.UBP.EF
     public partial class UbpDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
         //TODO: Define an IDbSet for each Entity...
+        public virtual IDbSet<BinaryObject> BinaryObjects { get; set; }
+
+        public virtual IDbSet<Friendship> Friendships { get; set; }
+
+        public virtual IDbSet<ChatMessage> ChatMessages { get; set; }
+
         /// <summary>
         /// 模块
         /// </summary>

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbpZeroDbMigrator\AbpZeroDbMigratorForOracleDevart.cs" />
     <Compile Include="CommandInterceptor.cs" />
     <Compile Include="OracleDevartCreateDatabaseIfNotExistsWithSeed.cs" />
     <Compile Include="OracleDevartDbContextInitializer.cs" />
@@ -63,6 +64,10 @@
     <ProjectReference Include="..\..\..\..\aspnetboilerplate\src\Abp\Abp.csproj">
       <Project>{be9aca26-9c1b-4975-9aad-bdd48de84eb8}</Project>
       <Name>Abp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\module-zero\src\Abp.Zero.Common\Abp.Zero.Common.csproj">
+      <Project>{362af84e-4d6b-4a8b-a111-91620c1f1e50}</Project>
+      <Name>Abp.Zero.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\..\module-zero\src\Abp.Zero.EntityFramework\Abp.Zero.EntityFramework.csproj">
       <Project>{e35a1703-64c2-4c81-82e5-4da2c79b4b5c}</Project>

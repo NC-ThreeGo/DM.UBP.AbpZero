@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Abp.MultiTenancy;
+using Abp.Zero.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
@@ -11,8 +13,12 @@ namespace DM.UBP.EF.Migrations
     /// <summary>
     /// 数据迁移配置基类
     /// </summary>
-    public abstract class MigrationsConfigurationWithSeedBase<TDbContext> : DbMigrationsConfiguration<TDbContext> where TDbContext : UbpDbContext
+    public abstract class MigrationsConfigurationWithSeedBase<TDbContext> 
+        : DbMigrationsConfiguration<TDbContext>, IMultiTenantSeed
+        where TDbContext : UbpDbContext
     {
+        public AbpTenantBase Tenant { get; set; }
+
         /// <summary>
         /// 初始化一个<see cref="MigrationsConfigurationWithSeedBase{TDbContext}"/>类型的新实例
         /// </summary>

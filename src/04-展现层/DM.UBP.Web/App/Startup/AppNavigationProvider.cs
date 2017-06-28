@@ -40,6 +40,10 @@ namespace DM.UBP.Web.App.Startup
                     )
                 ).AddItem(new MenuItemDefinition(
                     PageNames.App.Common.Administration,
+                    L("SysManage"),
+                    icon: "icon-wrench"
+                    ).AddItem(new MenuItemDefinition(
+                    PageNames.App.Common.Administration,
                     L("Administration"),
                     icon: "icon-wrench"
                     ).AddItem(new MenuItemDefinition(
@@ -100,6 +104,7 @@ namespace DM.UBP.Web.App.Startup
                         requiredPermissionName: AppPermissions.Pages_Administration_Tenant_Settings
                         )
                     )
+                )
                 );
         }
 

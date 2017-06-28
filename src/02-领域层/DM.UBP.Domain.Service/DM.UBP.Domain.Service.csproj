@@ -217,15 +217,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Localization\Source\UBP-ar.xml" />
-    <Content Include="Localization\Source\UBP-de.xml" />
-    <Content Include="Localization\Source\UBP-fr.xml" />
-    <Content Include="Localization\Source\UBP-it.xml" />
-    <Content Include="Localization\Source\UBP-pt-BR.xml" />
-    <Content Include="Localization\Source\UBP-ru.xml" />
-    <Content Include="Localization\Source\UBP-tr.xml" />
-    <Content Include="Localization\Source\UBP-zh-CN.xml" />
-    <Content Include="Localization\Source\UBP.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-ar.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-de.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-fr.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-it.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-pt-BR.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-ru.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-tr.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP-zh-CN.xml" />
+    <EmbeddedResource Include="Localization\Source\UBP.xml" />
     <Content Include="Localization\Source\READ_ME.txt" />
     <Content Include="SysManage\Emailing\EmailTemplates\default.html" />
   </ItemGroup>

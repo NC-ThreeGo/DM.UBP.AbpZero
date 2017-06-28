@@ -11,6 +11,7 @@ namespace DM.UBP.Core.Config
     {
         private const string XmlnsKey = "xmlns";
         private const string DbContextInitializerKey = "dbContextInitializer";
+        private const string AbpZeroDbMigratorKey = "abpZeroDbMigrator";
 
         [ConfigurationProperty(XmlnsKey, IsRequired = false)]
         private string Xmlns
@@ -24,6 +25,13 @@ namespace DM.UBP.Core.Config
         {
             get { return (DbContextInitializerElement)this[DbContextInitializerKey]; }
             set { this[DbContextInitializerKey] = value; }
+        }
+
+        [ConfigurationProperty(AbpZeroDbMigratorKey)]
+        public virtual AbpZeroDbMigratorElement AbpZeroDbMigrator
+        {
+            get { return (AbpZeroDbMigratorElement)this[AbpZeroDbMigratorKey]; }
+            set { this[AbpZeroDbMigratorKey] = value; }
         }
     }
 }

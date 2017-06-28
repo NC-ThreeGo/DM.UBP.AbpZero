@@ -53,6 +53,7 @@
     <Compile Include="SysManage\Authorization\ModuleOperateConfiguration.cs" />
     <Compile Include="SysManage\Authorization\UserConfiguration.cs" />
     <Compile Include="SysManage\BackgroundJob\BackgroundJobConfiguration.cs" />
+    <Compile Include="SysManage\Chat\ChatMessageConfiguration.cs" />
     <Compile Include="SysManage\Localization\ApplicationLanguageTextConfiguration.cs" />
     <Compile Include="SysManage\Notification\NotificationConfiguration.cs" />
     <Compile Include="SysManage\Notification\NotificationSubscriptionConfiguration.cs" />

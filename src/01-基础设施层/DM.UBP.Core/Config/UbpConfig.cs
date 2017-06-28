@@ -21,9 +21,11 @@ namespace DM.UBP.Core.Config
             if (section == null)
             {
                 DbContextInitializerConfig = new DbContextInitializerConfig();
+                AbpZeroDbMigratorConfig = new AbpZeroDbMigratorConfig();
                 return;
             }
             DbContextInitializerConfig = new DbContextInitializerConfig(section.DbContextInitializer);
+            AbpZeroDbMigratorConfig = new AbpZeroDbMigratorConfig(section.AbpZeroDbMigrator);
         }
 
         /// <summary>
@@ -51,5 +53,10 @@ namespace DM.UBP.Core.Config
         /// 获取或设置 数据配置信息
         /// </summary>
         public DbContextInitializerConfig DbContextInitializerConfig { get; set; }
+
+        /// <summary>
+        /// 获取或设置 AbpZeroDbMigrator配置信息
+        /// </summary>
+        public AbpZeroDbMigratorConfig AbpZeroDbMigratorConfig { get; set; }
     }
 }

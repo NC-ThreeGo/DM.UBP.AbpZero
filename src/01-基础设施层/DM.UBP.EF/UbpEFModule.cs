@@ -1,14 +1,15 @@
-﻿using Abp.Domain.Uow;
-using Abp.EntityFramework;
-using Abp.Modules;
-using System.Reflection;
+﻿using Abp.Modules;
+using Abp.MultiTenancy;
+using Abp.Zero.EntityFramework;
+using Castle.MicroKernel.Registration;
 using DM.UBP.Core;
 using DM.UBP.Core.Config;
 using DM.UBP.Domain.Service;
+using System.Reflection;
 
 namespace DM.UBP.EF
 {
-    [DependsOn(typeof(AbpEntityFrameworkModule), typeof(UbpCoreModule), typeof(UbpDomainServiceModule))]
+    [DependsOn(typeof(AbpZeroEntityFrameworkModule), typeof(UbpCoreModule), typeof(UbpDomainServiceModule))]
     public class UbpEFModule : AbpModule
     {
         private static bool _databaseInitialized;
@@ -37,6 +38,9 @@ namespace DM.UBP.EF
                 databaseInitializer.Initialize(config.DbContextInitializerConfig);
                 _databaseInitialized = true;
             }
+
+            //根据ubp配置，获得基于当前数据库的IAbpZeroDbMigrator实现类，并向IocManager注册。
+            IocManager.IocContainer.Register(Component.For(typeof(IAbpZeroDbMigrator)).ImplementedBy(config.AbpZeroDbMigratorConfig.AbpZeroDbMigratorType));
         }
     }
 }

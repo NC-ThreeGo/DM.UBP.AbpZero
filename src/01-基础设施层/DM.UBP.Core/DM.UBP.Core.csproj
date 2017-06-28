@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppVersionHelper.cs" />
+    <Compile Include="Config\AbpZeroDbMigratorConfig.cs" />
+    <Compile Include="Config\AbpZeroDbMigratorElement.cs" />
     <Compile Include="Config\DbContextInitializerConfig.cs" />
     <Compile Include="Config\DbContextInitializerElement.cs" />
     <Compile Include="Config\IDbContextInitializerConfigReseter.cs" />
