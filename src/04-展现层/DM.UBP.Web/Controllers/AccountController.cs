@@ -1168,7 +1168,12 @@ namespace DM.UBP.Web.Controllers
         #endregion
 
         #region Helpers
-
+        /// <summary>
+        /// 给ReturnUrl赋默认值：Url.Action("Index", "Application")
+        /// </summary>
+        /// <param name="returnUrl"></param>
+        /// <param name="defaultValueBuilder"></param>
+        /// <returns></returns>
         private string NormalizeReturnUrl(string returnUrl, Func<string> defaultValueBuilder = null)
         {
             if (defaultValueBuilder == null)

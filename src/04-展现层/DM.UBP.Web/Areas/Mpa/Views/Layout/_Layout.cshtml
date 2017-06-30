@@ -39,7 +39,7 @@
 
     @RenderSection("Styles", false)
     
-    @Html.Action("TenantCustomCss", "Layout")
+    @Html.Action("TenantCustomCss", "Layout", new { area = "Mpa" })
 
     <script type="text/javascript">
         @* This is used to get the application's root path from javascript.
@@ -61,7 +61,7 @@
 <body class="page-md page-header-fixed page-sidebar-closed-hide-logo">
 
     <div class="page-header navbar navbar-fixed-top md-shadow-zero-light">
-        @Html.Action("Header", "Layout")
+        @Html.Action("Header", "Layout", new { area = "Mpa" })
     </div>
 
     <div class="clearfix">
@@ -69,7 +69,8 @@
 
     <div class="page-container">
         <div class="page-sidebar-wrapper">
-            @Html.Action("Sidebar", "Layout", new { currentPageName = ViewBag.CurrentPageName })
+            @*@Html.Action("Sidebar", "Layout", new { currentPageName = ViewBag.CurrentPageName })*@
+            @Html.Action("Sidebar", "Layout", new { area = "Mpa", currentPageName = ViewBag.CurrentPageName })
         </div>
         <div class="page-content-wrapper">
             <div class="page-content">
@@ -78,12 +79,12 @@
         </div>
         @if (AbpSession.MultiTenancySide == MultiTenancySides.Host || IsFeatureEnabled(AppFeatures.ChatFeature))
         {
-            @Html.Action("ChatBar", "Layout")
+            @Html.Action("ChatBar", "Layout", new { area = "Mpa" })
         }
     </div>
 
     <div class="page-footer">
-        @Html.Action("Footer", "Layout")
+        @Html.Action("Footer", "Layout", new { area = "Mpa" })
     </div>
 
     <!--[if lt IE 9]>

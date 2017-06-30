@@ -11,7 +11,8 @@ namespace DM.UBP.Web.Controllers
         public ActionResult Index()
         {
             /* Enable next line to redirect to Multi-Page Application */
-            //return RedirectToAction("Index", "Home", new { area = "Mpa" });
+            //默认启用MPA方式，如果注释掉则默认启用SPA
+            return RedirectToAction("Index", "Home", new { area = "Mpa" });
 
             return View("~/App/common/views/layout/layout.cshtml"); //Layout of the angular application.
         }
