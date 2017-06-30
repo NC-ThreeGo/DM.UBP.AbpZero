@@ -34,7 +34,7 @@ namespace DM.UBP.Web.Bundling
         public const string Bootstrap_Select = "~/libs/bootstrap-select/bootstrap-select.min.js";
         public const string Bootstrap_Switch = "~/libs/bootstrap-switch/js/bootstrap-switch.min.js";
 
-        public const string SignalR = "~/Scripts/jquery.signalR-2.2.1.min.js";
+        public const string SignalR = "~/Scripts/jquery.signalR-2.2.2.min.js";
         public const string LocalForage = "~/Scripts/localforage/localforage.min.js";
 
         public const string Morris = "~/libs/morris/morris.min.js";

@@ -38,7 +38,7 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     )
                 ).AddItem(new MenuItemDefinition(
                     PageNames.App.Common.Administration,
-                    L("BaseManage"),
+                    L("SysManage"),
                     icon: "icon-home"
                     ).AddItem(new MenuItemDefinition(
                     PageNames.App.Common.Administration,

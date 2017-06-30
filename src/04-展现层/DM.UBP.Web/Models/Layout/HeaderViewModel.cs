@@ -25,7 +25,10 @@ namespace DM.UBP.Web.Models.Layout
         {
             if (!IsMultiTenancyEnabled)
             {
-                return LoginInformations.User.UserName;
+                if (LoginInformations.User != null)
+                    return LoginInformations.User.UserName;
+                else
+                    return null;
             }
 
             return LoginInformations.Tenant == null

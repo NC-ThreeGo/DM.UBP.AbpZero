@@ -17,7 +17,7 @@ namespace DM.UBP.Application.Service
 
             Configuration.Modules.AbpAutoMapper().Configurators.Add(mapper =>
             {
-                //Add your custom AutoMapper mappings here...
+                CustomDtoMapper.CreateMappings(mapper);
             });
         }
 
