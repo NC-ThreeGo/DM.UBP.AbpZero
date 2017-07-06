@@ -11248,3 +11248,243 @@ WARN  2017-07-06 15:48:33,549 [65   ] naries.DictionaryBasedLocalizationSource -
 DEBUG 2017-07-06 15:48:36,879 [74   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6ae51111-602d-49a2-9b53-90dfe88f461e","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T07:48:36.8795051Z","Properties":{}}
 DEBUG 2017-07-06 15:48:36,897 [81   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6ae51111-602d-49a2-9b53-90dfe88f461e
 DEBUG 2017-07-06 15:49:00,732 [81   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e06d5c00-e698-441a-be99-c232aefdc8b0
+DEBUG 2017-07-06 16:34:39,754 [67   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6ae51111-602d-49a2-9b53-90dfe88f461e
+DEBUG 2017-07-06 16:34:42,078 [27   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"80ff54ad-ff29-43cd-83c3-ee2ccdd05b85","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T08:34:42.0781257Z","Properties":{}}
+DEBUG 2017-07-06 17:40:50,764 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 80ff54ad-ff29-43cd-83c3-ee2ccdd05b85
+DEBUG 2017-07-06 17:40:54,855 [60   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"92a45547-1871-43e0-bb3a-98cdab2b368d","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T09:40:54.8559202Z","Properties":{}}
+DEBUG 2017-07-06 17:50:20,377 [88   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 92a45547-1871-43e0-bb3a-98cdab2b368d
+DEBUG 2017-07-06 17:50:24,726 [62   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"817449b5-647e-473e-a53b-64663716dad0","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T09:50:24.7256564Z","Properties":{}}
+DEBUG 2017-07-06 17:52:30,986 [27   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-07-06 17:52:30,989 [27   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-06 17:52:30,990 [27   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-06 17:52:30,990 [27   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-07-06 17:52:57,343 [26   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-06 17:52:59,876 [26   ] Abp.Modules.AbpModuleManager             - Found 24 ABP modules in total.
+DEBUG 2017-07-06 17:52:59,887 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Web.UbpWebModule, DM.UBP.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,889 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,890 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,890 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,890 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,890 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,891 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,891 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,891 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.EF.UbpEFModule, DM.UBP.EF, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,891 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,892 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,892 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,893 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Core.UbpCoreModule, DM.UBP.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,893 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Domain.Service.UbpDomainServiceModule, DM.UBP.Domain.Service, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,893 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Domain.Entity.UbpDomainEntityModule, DM.UBP.Domain.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,893 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,894 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,894 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Application.Service.UbpApplicationServiceModule, DM.UBP.Application.Service, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,894 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Application.Dto.UbpApplicationDtoModule, DM.UBP.Application.Dto, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,894 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.WebApi.UbpWebApiModule, DM.UBP.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,895 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,895 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,895 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,895 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:52:59,899 [26   ] Abp.Modules.AbpModuleManager             - 24 modules loaded.
+DEBUG 2017-07-06 17:53:02,537 [26   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:53:02,537 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:53:02,537 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:53:02,537 [26   ] o.Configuration.LanguageManagementConfig - Converted UBP (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:53:03,578 [26   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DM.UBP.EF.UbpDbContext, DM.UBP.EF, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:53:06,323 [26   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-06 17:53:06,332 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-06 17:53:06,333 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-06 17:53:06,339 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-06 17:53:06,354 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: UBP
+DEBUG 2017-07-06 17:53:06,439 [26   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-06 17:53:07,461 [26   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-06 17:53:07,654 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 39 classes define auto mapping attributes
+DEBUG 2017-07-06 17:53:07,654 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Domain.Service.SysManage.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-06 17:53:07,665 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Sessions.TenantLoginInfoDto
+DEBUG 2017-07-06 17:53:07,665 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Sessions.UserLoginInfoDto
+DEBUG 2017-07-06 17:53:07,665 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Organizations.OrganizationUnitDto
+DEBUG 2017-07-06 17:53:07,665 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Organizations.OrganizationUnitUserListDto
+DEBUG 2017-07-06 17:53:07,666 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Notifications.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-06 17:53:07,666 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.MultiTenancy.TenantEditDto
+DEBUG 2017-07-06 17:53:07,666 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.MultiTenancy.TenantListDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Localization.ApplicationLanguageEditDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Localization.ApplicationLanguageListDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Friendships.FriendDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Editions.EditionEditDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Editions.EditionListDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Editions.FlatFeatureDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Chat.ChatMessageDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Chat.ChatUserDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Chat.ChatUserWithMessagesDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.UserListDto
+DEBUG 2017-07-06 17:53:07,667 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.UserLoginAttemptDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.Profile.CurrentUserProfileEditDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Roles.RoleEditDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Roles.RoleListDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Permissions.FlatPermissionDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Permissions.FlatPermissionWithLevelDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.CreateModuleInput
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleColumnFilterDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleListDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleOperateDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Auditing.AuditLogListDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.UserListDto+UserListRoleDto
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-06 17:53:07,668 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-06 17:53:07,669 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-06 17:53:08,177 [26   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-06 17:53:08,202 [26   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-06 17:53:08,220 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-06 17:53:08,221 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-06 17:53:08,223 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-06 17:53:08,224 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-06 17:53:08,225 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-06 17:53:08,227 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-06 17:53:08,228 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-06 17:53:08,230 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-06 17:53:08,231 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-06 17:53:08,232 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-06 17:53:08,234 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-06 17:53:08,235 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-06 17:53:08,236 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-06 17:53:08,238 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-06 17:53:08,239 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-06 17:53:08,241 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-06 17:53:08,242 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-06 17:53:08,243 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-06 17:53:08,245 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-06 17:53:08,246 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-06 17:53:08,248 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-06 17:53:08,249 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Modules.IModuleAppService' with service name 'app/module'.
+DEBUG 2017-07-06 17:53:08,250 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+ERROR 2017-07-06 17:53:15,976 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - Can not find IP address of the client! connectionId: 817449b5-647e-473e-a53b-64663716dad0
+ERROR 2017-07-06 17:53:15,976 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - 值不在预期的范围内。
+System.ArgumentException: 值不在预期的范围内。
+   在 System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   在 System.Web.Hosting.IIS7WorkerRequest.GetServerVariableInternal(String name)
+   在 System.Web.Hosting.IIS7WorkerRequest.GetServerVariable(String name)
+   在 System.Web.HttpRequest.FillInServerVariablesCollection()
+   在 System.Web.HttpServerVarsCollection.Populate()
+   在 System.Web.HttpServerVarsCollection.Get(String name)
+   在 Microsoft.Owin.Host.SystemWeb.OwinCallContext.Microsoft.Owin.Host.SystemWeb.CallEnvironment.AspNetDictionary.IPropertySource.GetServerRemoteIpAddress()
+   在 Microsoft.Owin.Host.SystemWeb.CallEnvironment.AspNetDictionary.get_ServerRemoteIpAddress()
+   在 Microsoft.Owin.Host.SystemWeb.CallEnvironment.AspNetDictionary.PropertiesTryGetValue(String key, Object& value)
+   在 Microsoft.Owin.Host.SystemWeb.CallEnvironment.AspNetDictionary.System.Collections.Generic.IDictionary<System.String,System.Object>.get_Item(String key)
+   在 Abp.Web.SignalR.Hubs.AbpCommonHub.GetIpAddressOfClient()
+DEBUG 2017-07-06 17:53:15,996 [65   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0456a471-12df-4fb9-888b-73bd01232062","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T09:53:15.9756468Z","Properties":{}}
+DEBUG 2017-07-06 17:53:16,327 [91   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"817449b5-647e-473e-a53b-64663716dad0","IpAddress":"","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T09:53:15.9966458Z","Properties":{}}
+DEBUG 2017-07-06 17:53:55,874 [44   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 817449b5-647e-473e-a53b-64663716dad0
+DEBUG 2017-07-06 17:58:23,405 [65   ] Abp.Modules.AbpModuleManager             - Shutting down has been started
+DEBUG 2017-07-06 17:58:23,405 [65   ] Abp.BackgroundJobs.BackgroundJobManager  - Stop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-06 17:58:23,405 [65   ] Abp.BackgroundJobs.BackgroundJobManager  - WaitToStop background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-06 17:58:23,405 [65   ] Abp.Modules.AbpModuleManager             - Shutting down completed.
+DEBUG 2017-07-06 17:58:27,072 [26   ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2017-07-06 17:58:28,131 [26   ] Abp.Modules.AbpModuleManager             - Found 24 ABP modules in total.
+DEBUG 2017-07-06 17:58:28,146 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Web.UbpWebModule, DM.UBP.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,146 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,146 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,147 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,147 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,147 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpZeroOwinModule, Abp.Zero.Owin, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,147 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,148 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,148 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.EF.UbpEFModule, DM.UBP.EF, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,148 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,149 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,149 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,149 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Core.UbpCoreModule, DM.UBP.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,150 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Domain.Service.UbpDomainServiceModule, DM.UBP.Domain.Service, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,150 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Domain.Entity.UbpDomainEntityModule, DM.UBP.Domain.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,150 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.Ldap.AbpZeroLdapModule, Abp.Zero.Ldap, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,151 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,151 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Application.Service.UbpApplicationServiceModule, DM.UBP.Application.Service, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,151 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.Application.Dto.UbpApplicationDtoModule, DM.UBP.Application.Dto, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,151 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: DM.UBP.WebApi.UbpWebApiModule, DM.UBP.WebApi, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,152 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,152 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,152 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Runtime.Caching.Redis.AbpRedisCacheModule, Abp.RedisCache, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,152 [26   ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Hangfire.AbpHangfireModule, Abp.HangFire, Version=2.1.2.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:28,160 [26   ] Abp.Modules.AbpModuleManager             - 24 modules loaded.
+DEBUG 2017-07-06 17:58:30,466 [26   ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:58:30,467 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:58:30,467 [26   ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:58:30,467 [26   ] o.Configuration.LanguageManagementConfig - Converted UBP (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2017-07-06 17:58:31,808 [26   ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: DM.UBP.EF.UbpDbContext, DM.UBP.EF, Version=4.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2017-07-06 17:58:38,358 [26   ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2017-07-06 17:58:38,373 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2017-07-06 17:58:38,389 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2017-07-06 17:58:38,404 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2017-07-06 17:58:38,451 [26   ] Abp.Localization.LocalizationManager     - Initialized localization source: UBP
+DEBUG 2017-07-06 17:58:38,576 [26   ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2017-07-06 17:58:40,927 [26   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-06 17:58:41,271 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - Found 39 classes define auto mapping attributes
+DEBUG 2017-07-06 17:58:41,271 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Domain.Service.SysManage.Friendships.Cache.FriendCacheItem
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Sessions.TenantLoginInfoDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Sessions.UserLoginInfoDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Organizations.OrganizationUnitDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Organizations.OrganizationUnitUserListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Notifications.NotificationSubscriptionWithDisplayNameDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.MultiTenancy.TenantEditDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.MultiTenancy.TenantListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Localization.ApplicationLanguageEditDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Localization.ApplicationLanguageListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Friendships.FriendDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Editions.EditionEditDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Editions.EditionListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Editions.FlatFeatureDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Chat.ChatMessageDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Chat.ChatUserDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Chat.ChatUserWithMessagesDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.UserListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.UserLoginAttemptDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.Profile.CurrentUserProfileEditDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Roles.RoleEditDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Roles.RoleListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Permissions.FlatPermissionDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Permissions.FlatPermissionWithLevelDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.CreateModuleInput
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleColumnFilterDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleOperateDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Auditing.AuditLogListDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Application.Dto.SysManage.Authorization.Users.UserListDto+UserListRoleDto
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Users.CreateOrEditUserModalViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Users.UserPermissionsEditViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Tenants.TenantFeaturesEditViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Roles.CreateOrEditRoleModalViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Profile.MySettingsViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.OrganizationUnits.EditOrganizationUnitModalViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Languages.CreateOrEditLanguageModalViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Areas.Mpa.Models.Editions.CreateOrEditEditionModalViewModel
+DEBUG 2017-07-06 17:58:41,287 [26   ] Abp.AutoMapper.AbpAutoMapperModule       - DM.UBP.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2017-07-06 17:58:42,099 [26   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-06 17:58:42,130 [26   ] Abp.Owin.OwinUserTokenProviderAccessor   - DataProtectionProvider has not been set yet.
+DEBUG 2017-07-06 17:58:42,162 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Timing.ITimingAppService' with service name 'app/timing'.
+DEBUG 2017-07-06 17:58:42,162 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Tenants.Dashboard.ITenantDashboardAppService' with service name 'app/tenantDashboard'.
+DEBUG 2017-07-06 17:58:42,162 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2017-07-06 17:58:42,162 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Organizations.IOrganizationUnitAppService' with service name 'app/organizationUnit'.
+DEBUG 2017-07-06 17:58:42,162 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Notifications.INotificationAppService' with service name 'app/notification'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Logging.IWebLogAppService' with service name 'app/webLog'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Localization.ILanguageAppService' with service name 'app/language'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Friendships.IFriendshipAppService' with service name 'app/friendship'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Editions.IEditionAppService' with service name 'app/edition'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Configuration.Tenants.ITenantSettingsAppService' with service name 'app/tenantSettings'.
+DEBUG 2017-07-06 17:58:42,177 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Configuration.Host.IHostSettingsAppService' with service name 'app/hostSettings'.
+DEBUG 2017-07-06 17:58:42,193 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Common.ICommonLookupAppService' with service name 'app/commonLookup'.
+DEBUG 2017-07-06 17:58:42,193 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Chat.IChatAppService' with service name 'app/chat'.
+DEBUG 2017-07-06 17:58:42,193 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Caching.ICachingAppService' with service name 'app/caching'.
+DEBUG 2017-07-06 17:58:42,193 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2017-07-06 17:58:42,193 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.IUserLinkAppService' with service name 'app/userLink'.
+DEBUG 2017-07-06 17:58:42,193 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.IUserLoginAppService' with service name 'app/userLogin'.
+DEBUG 2017-07-06 17:58:42,208 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Users.Profile.IProfileAppService' with service name 'app/profile'.
+DEBUG 2017-07-06 17:58:42,208 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2017-07-06 17:58:42,208 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Permissions.IPermissionAppService' with service name 'app/permission'.
+DEBUG 2017-07-06 17:58:42,208 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Authorization.Modules.IModuleAppService' with service name 'app/module'.
+DEBUG 2017-07-06 17:58:42,208 [26   ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'DM.UBP.Application.Service.SysManage.Auditing.IAuditLogAppService' with service name 'app/auditLog'.
+DEBUG 2017-07-06 17:58:48,374 [63   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"0456a471-12df-4fb9-888b-73bd01232062","IpAddress":"::1","TenantId":1,"UserId":2,"ConnectTime":"2017-07-06T09:58:47.3433623Z","Properties":{}}
