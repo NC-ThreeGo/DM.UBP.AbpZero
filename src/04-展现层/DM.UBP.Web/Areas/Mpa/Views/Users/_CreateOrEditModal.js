@@ -73,7 +73,7 @@
             }).done(function () {
                 abp.notify.info(app.localize('SavedSuccessfully'));
                 _modalManager.close();
-                abp.event.trigger('app.createOrEditUserModalSaved');
+                abp.event.trigger('app.createOrEditModuleModalSaved');
             }).always(function () {
                 _modalManager.setBusy(false);
             });

@@ -58,8 +58,13 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                         ScriptPaths.Abp_Moment,
                         ScriptPaths.Abp_jTable,
                         ScriptPaths.MustacheJs,
-                        ScriptPaths.Tether
-                    ).ForceOrdered()
+                        ScriptPaths.Tether,
+
+                        //bootstrap-table
+                        ScriptPaths.Bootstrap_Table,
+                        //ScriptPaths.Bootstrap_Table_TreeColumn,
+                        ScriptPaths.Bootstrap_Table_TreeGrid
+                   ).ForceOrdered()
                 );
 
             //COMMON (for MPA)
@@ -104,6 +109,11 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     .Include(StylePaths.Bootstrap_Switch)
                     .Include(StylePaths.Bootstrap_Select)
                     .Include(StylePaths.JQuery_Jcrop)
+
+                    //bootstrap-table
+                    .Include(StylePaths.Bootstrap_Table)
+                    //.Include(StylePaths.Bootstrap_Table_TreeColumn)
+
                     .ForceOrdered()
                 );
         }

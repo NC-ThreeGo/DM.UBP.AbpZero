@@ -1,0 +1,70 @@
+﻿@using Abp.Authorization.Users
+@using Abp.Configuration
+@using Abp.Extensions
+@using Abp.Zero.Configuration
+@using DM.UBP.Web.Areas.Mpa.Models.Common.Modals
+@model DM.UBP.Application.Dto.SysManage.Authorization.Modules.ModuleColumnFilterDto
+
+@Html.Partial("~/Areas/Mpa/Views/Common/Modals/_ModalHeader.cshtml", new ModalHeaderViewModel(Model.IsEditMode ? (L("EditColumnFilter") + ": " + Model.ColumnName) : L("CreateColumnFilter")))
+
+<div class="modal-body">
+
+    <div class="tabbable-line">
+        <ul class="nav nav-tabs ">
+            <li class="active">
+                <a href="#ModuleInformationsTab" data-toggle="tab" aria-expanded="true">
+                    @L("ColumnFilterInformations")
+                </a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="ModuleInformationsTab">
+
+                <form name="ColumnFilterInformationsForm" role="form" novalidate class="form-validation">
+
+                    @if (Model.IsEditMode)
+                    {
+                        <input type="hidden" name="Id" value="@Model.Id" />
+                    }
+
+                    <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                        <input type="text" name="ColumnCode" class="form-control@(Model.ColumnCode.IsNullOrEmpty() ? "" : " edited")" value="@Model.ColumnCode">
+                        <label>@L("ColumnCode")</label>
+                    </div>
+
+                    <div class="form-group form-md-line-input form-md-floating-label no-hint">
+                        <input type="text" name="ColumnName" class="form-control@(Model.ColumnName.IsNullOrEmpty() ? "" : " edited")" value="@Model.ColumnName">
+                        <label>@L("ColumnName")</label>
+                    </div>
+
+                    <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="text" name="ModuleId" class="form-control@(Model.ModuleId < 0 ? "" : " edited")" value="@Model.ModuleId">
+                        <label>@L("ModuleId")</label>
+                    </div>
+
+                    <div class="form-group form-md-line-input form-md-floating-label">
+                        <input type="text" name="Sort" class="form-control edited" value="@Model.Sort">
+                        <label>@L("Sort")</label>
+                    </div>
+
+                    <div class="md-checkbox-list">
+                        <div class="md-checkbox">
+                            <input id="EditModule_IsValid" class="md-check" type="checkbox" name="IsValid" value="true" @Html.Raw(Model.IsValid ? "checked=\"checked\"" : "")>
+                            <label for="EditModule_IsValid">
+                                <span class="inc"></span>
+                                <span class="check"></span>
+                                <span class="box"></span>
+                                @L("IsValid")
+                            </label>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@Html.Partial("~/Areas/Mpa/Views/Common/Modals/_ModalFooterWithSaveAndCancel.cshtml")

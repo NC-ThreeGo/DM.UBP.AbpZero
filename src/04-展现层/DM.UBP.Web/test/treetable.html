@@ -1,0 +1,228 @@
+﻿
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js" data-ng-app="app"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js" data-ng-app="app"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" dir=>
+<!--<![endif]-->
+<head>
+    <title>DM.UBP</title>
+    <meta charset="utf-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <link href="/Content/fonts-open-sans.css" rel="stylesheet" type="text/css" />
+
+    <link href="/libs/jquery-ui/jquery-ui.min.css" rel="stylesheet" />
+    <link href="/libs/jquery-jtable/themes/metro/blue/jtable.min.css" rel="stylesheet" />
+    <link href="/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="/libs/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" />
+    <link href="/Content/flags/famfamfam-flags.css" rel="stylesheet" />
+    <link href="/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/libs/jquery-uniform/css/uniform.default.css" rel="stylesheet" />
+    <link href="/libs/jstree/themes/default/style.css" rel="stylesheet" />
+    <link href="/libs/morris/morris.css" rel="stylesheet" />
+    <link href="/libs/sweetalert/sweet-alert.css" rel="stylesheet" />
+    <link href="/libs/toastr/toastr.min.css" rel="stylesheet" />
+    <link href="/libs/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
+    <link href="/libs/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" />
+    <link href="/libs/bootstrap-select/bootstrap-select.min.css" rel="stylesheet" />
+    <link href="/libs/jcrop/css/jquery.Jcrop.min.css" rel="stylesheet" />
+    <link href="/libs/bootstrap-table/bootstrap-table.css" rel="stylesheet" />
+    <link href="/libs/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.css" rel="stylesheet" />
+
+    <link href="/metronic/assets/global/css/components-md.css" rel="stylesheet" />
+    <link href="/metronic/assets/global/css/plugins-md.css" rel="stylesheet" />
+    <link href="/metronic/assets/admin/layout4/css/layout.css" rel="stylesheet" />
+    <link href="/metronic/assets/admin/layout4/css/themes/light.css" rel="stylesheet" />
+
+    <link href="/Common/Styles/core.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="/Areas/Mpa/Views/Layout/_ChatBar.min.css?v=636342290799705840" />
+    <link rel="stylesheet" type="text/css" href="/Areas/Mpa/Views/Layout/_Layout.min.css?v=636342290800115847" />
+
+
+
+
+
+    <script type="text/javascript">
+
+        var abp = abp || {}; abp.appPath = '/';
+    </script>
+</head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+<!-- DOC: Apply "page-header-fixed-mobile" and "page-footer-fixed-mobile" class to body element to force fixed header or footer in mobile devices -->
+<!-- DOC: Apply "page-sidebar-closed" class to the body and "page-sidebar-menu-closed" class to the sidebar menu element to hide the sidebar by default -->
+<!-- DOC: Apply "page-sidebar-hide" class to the body to make the sidebar completely hidden on toggle -->
+<!-- DOC: Apply "page-sidebar-closed-hide-logo" class to the body element to make the logo hidden on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-hide" class to body element to completely hide the sidebar on sidebar toggle -->
+<!-- DOC: Apply "page-sidebar-fixed" class to have fixed sidebar -->
+<!-- DOC: Apply "page-footer-fixed" class to the body element to have fixed footer -->
+<!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
+<!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
+<body class="page-md page-header-fixed page-sidebar-closed-hide-logo">
+
+
+    <div class="page-container">
+        <div class="page-content-wrapper">
+            <div class="page-content">
+
+                <div id="toolbar">
+                    <button id="button" class="btn btn-default">getSelections</button>
+                </div>
+                <div class="portlet light margin-bottom-0">
+                    <div class="portlet-body">
+                        <div id="toolbar"></div>
+                        <!--<div id="ModulesTable"></div>-->
+
+                        <table id="ModulesTable"
+                               data-height="480"
+                               data-pagination="true"
+                               data-url="/SysManage/Module/GetMenuList"
+                               data-striped="true"
+                               data-singleSelect="true"
+                               data-clickToSelect="true"
+                               data-resizable="true">
+                            <thead>
+                                <tr>
+                                    <th data-field="state" data-checkbox="true"></th>
+                                    <th data-field="Id">ID</th>
+                                    <th data-field="Name">菜单名称</th>
+                                    <th data-field="Url">Url</th>
+                                    <th data-field="Level">级别</th>
+                                    <th data-field="Sort">序号</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="/libs/json2/json2.min.js"></script>
+    <script src="/libs/jquery/jquery.min.js"></script>
+    <script src="/libs/jquery/jquery-migrate.min.js"></script>
+    <script src="/libs/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/libs/jquery-validation/js/jquery.validate.min.js"></script>
+    <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/libs/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/libs/jquery-blockui/jquery.blockui.min.js"></script>
+    <script src="/libs/js-cookie/js.cookie.min.js"></script>
+    <script src="/libs/jquery-uniform/jquery.uniform.min.js"></script>
+    <script src="/libs/jquery-ajax-form/jquery.form.js"></script>
+    <script src="/libs/jquery-jtable/jquery.jtable.min.js"></script>
+    <script src="/libs/jquery-jtable/extensions/jquery.jtable.record-actions.js"></script>
+    <script src="/libs/jcrop/js/jquery.color.js"></script>
+    <script src="/libs/jcrop/js/jquery.Jcrop.min.js"></script>
+    <script src="/libs/jquery-timeago/jquery.timeago.js"></script>
+    <script src="/Scripts/jquery.signalR-2.2.2.min.js"></script>
+    <script src="/Scripts/localforage/localforage.min.js"></script>
+    <script src="/libs/morris/morris.min.js"></script>
+    <script src="/libs/morris/raphael-min.js"></script>
+    <script src="/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="/libs/jstree/jstree.js"></script>
+    <script src="/libs/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+    <script src="/libs/spinjs/spin.js"></script>
+    <script src="/libs/spinjs/jquery.spin.js"></script>
+    <script src="/libs/push-js/push.min.js"></script>
+    <script src="/libs/sweetalert/sweet-alert.min.js"></script>
+    <script src="/libs/toastr/toastr.min.js"></script>
+    <script src="/Scripts/moment-with-locales.min.js"></script>
+    <script src="/Scripts/moment-timezone-with-data.min.js"></script>
+    <script src="/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="/libs/bootstrap-select/bootstrap-select.min.js"></script>
+    <script src="/Scripts/underscore.min.js"></script>
+    <script src="/Abp/Framework/scripts/abp.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.jquery.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.toastr.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.blockUI.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.spin.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.sweet-alert.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.moment.js"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.jtable.js"></script>
+    <script src="/libs/mustachejs/mustache.min.js"></script>
+    <script src="/libs/tether/js/tether.min.js"></script>
+    <script src="/libs/bootstrap-table/bootstrap-table.js"></script>
+    <!--<script src="/libs/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.js"></script>-->
+    <script src="/libs/bootstrap-table/treegrid/bootstrap-table-treegrid.js"></script>
+    <script src="/libs/bootstrap-table/extensions/resizable/bootstrap-table-resizable.js"></script>
+    <script src="https://rawgit.com/wenzhixin/colResizable/master/source/colResizable-1.5.source.js"></script>
+
+
+    <script src="/libs/jquery-validation/js/localization/messages_zh.min.js?v=636286056080000000" type="text/javascript"></script>
+    <script src="/libs/jquery-jtable/localization/jquery.jtable.zh-cn.js?v=636286056080000000" type="text/javascript"></script>
+    <script src="/libs/bootstrap-select/i18n/defaults-zh_CN.js?v=636286056080000000" type="text/javascript"></script>
+    <script src="/libs/jquery-timeago/locales/jquery.timeago.en.js?v=636286056080000000" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function ()
+        {
+            $('#button').click(function ()
+            {
+                alert('getSelections: ' + JSON.stringify($('#ModulesTable').bootstrapTable('getSelections')));
+            });
+
+            $('#ModulesTable').bootstrapTable({
+                treeView: true,
+                treeId: "Id",
+                treeField: "Name",
+                treeRootLevel: 1,
+                treeCollapseAll: true,
+            })
+        });
+    </script>
+
+    <script>
+        abp.localization.defaultSourceName = 'UBP';
+        moment.locale('zh-CN'); //Localizing moment.js
+    </script>
+
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="/api/AbpServiceProxies/GetAll"></script>
+    <script src="/AbpScripts/GetScripts?v=636345054841220324" type="text/javascript"></script>
+
+    <!-- SignalR scripts -->
+    <script src="/signalr/hubs"></script>
+    <script src="/Abp/Framework/scripts/libs/abp.signalr.js?v=636286056080000000" type="text/javascript"></script>
+
+    <script src="/metronic/assets/global/scripts/app.js"></script>
+    <script src="/metronic/assets/admin/layout4/scripts/layout.js"></script>
+    <script src="/metronic/assets/layouts/global/scripts/quick-sidebar.js"></script>
+
+    <script type="text/javascript">
+        App.setAssetsPath(abp.appPath + 'metronic/assets/');
+    </script>
+
+    <script src="/Common/Scripts/appUserNotificationHelper.js"></script>
+    <script src="/Common/Scripts/consts.js"></script>
+    <script src="/Common/Scripts/helpers.js"></script>
+    <script src="/Common/Scripts/jquery-custom.js"></script>
+    <script src="/Common/Scripts/jquery-validation-custom.js"></script>
+    <script src="/Common/Scripts/librarySettings.js"></script>
+    <script src="/Common/Scripts/ModalManager.js"></script>
+    <script src="/Common/Scripts/passwordComplexityHelper.js"></script>
+    <script src="/Common/Scripts/utils.js"></script>
+    <script src="/Common/Scripts/Chat/chat.js"></script>
+    <script src="/Common/Scripts/Chat/chat.signalr.js"></script>
+    <script src="/Common/Scripts/LocalStorage/localStorage.js"></script>
+    <script src="/Common/Scripts/LocalStorage/localStorage.localForage.js"></script>
+
+    <script src="/Areas/Mpa/Views/Common/Modals/_LookupModal.js"></script>
+
+
+    <script src="/Areas/Mpa/Views/Layout/_Header.js?v=636342290799995846" type="text/javascript"></script>
+    <script src="/Areas/Mpa/Views/Layout/_ChatBar.js?v=636342290799645900" type="text/javascript"></script>
+
+
+</body>
+</html>

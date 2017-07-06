@@ -78,6 +78,12 @@ namespace DM.UBP.Web.Areas.Mpa.Controllers
             return PartialView("_ChatBar");
         }
 
+        //[ChildActionOnly]
+        public PartialViewResult IconList()
+        {
+            return PartialView("_IconList");
+        }
+
         [ChildActionOnly]
         public PartialViewResult TenantCustomCss()
         {

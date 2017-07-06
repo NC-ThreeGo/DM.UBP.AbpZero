@@ -63,7 +63,12 @@ namespace DM.UBP.Web.App.Startup
                         ScriptPaths.Abp_SpinJs,
                         ScriptPaths.Abp_SweetAlert,
                         ScriptPaths.Abp_Moment,
-                        ScriptPaths.Abp_Angular
+                        ScriptPaths.Abp_Angular,
+
+                        //bootstrap-table
+                        ScriptPaths.Bootstrap_Table,
+                        //ScriptPaths.Bootstrap_Table_TreeColumn,
+                        ScriptPaths.Bootstrap_Table_TreeGrid
                     ).ForceOrdered()
                 );
 
@@ -114,6 +119,11 @@ namespace DM.UBP.Web.App.Startup
                     .Include(StylePaths.Bootstrap_Select)
                     .Include(StylePaths.Bootstrap_Switch)
                     .Include(StylePaths.JQuery_Jcrop)
+
+                    //bootstrap-table
+                    .Include(StylePaths.Bootstrap_Table)
+                    //.Include(StylePaths.Bootstrap_Table_TreeColumn)
+
                     .ForceOrdered()
                 );
         }

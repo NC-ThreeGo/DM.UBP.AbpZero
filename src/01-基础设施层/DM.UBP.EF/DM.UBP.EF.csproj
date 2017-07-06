@@ -121,6 +121,7 @@
     <Compile Include="Migrations\CreateDatabaseIfNotExistsWithSeedBase.cs" />
     <Compile Include="Migrations\ISeedAction.cs" />
     <Compile Include="Migrations\MigrationsConfigurationWithSeedBase.cs" />
+    <Compile Include="UbpDbContext.SysManage.cs" />
     <Compile Include="UbpDbContext.cs" />
     <Compile Include="UbpRepositoryBase.cs" />
     <Compile Include="IEntityMapper.cs" />

@@ -45,6 +45,13 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     L("Administration"),
                     icon: "icon-wrench"
                     ).AddItem(new MenuItemDefinition(
+                        PageNames.App.Common.Module,
+                        L("Modules"),
+                        url: "/SysManage/Module",
+                        icon: "icon-layers"
+                        //requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
+                        )
+                    ).AddItem(new MenuItemDefinition(
                         PageNames.App.Common.OrganizationUnits,
                         L("OrganizationUnits"),
                         url: "Mpa/OrganizationUnits",

@@ -25,7 +25,6 @@
         });
 
         _$usersTable.jtable({
-
             title: app.localize('Users'),
             paging: true,
             sorting: true,

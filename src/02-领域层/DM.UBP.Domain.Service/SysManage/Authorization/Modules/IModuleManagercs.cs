@@ -3,14 +3,16 @@ using DM.UBP.Domain.Entity.SysManage.Authorization;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
+namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
 {
     public interface IModuleManagercs : IDomainService
     {
         #region 模块
-        Task<List<Module>> GetModules(long parentId);
+        Task<List<Module>> GetAllModulesAsync();
 
-        Module GetModuleById(long id);
+        Task<List<Module>> GetModulesAsync(long? parentId);
+
+        Task<Module> GetModuleById(long id);
 
         Task<bool> CreateModuleAsync(Module module);
 
@@ -18,9 +20,9 @@ namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
         #endregion
 
         #region 模块的操作码
-        //List<ModuleOperate> GetModuleOperates(ref GridPager pager, int moduleId);
+        Task<List<ModuleOperate>> GetModuleOperatesAsync(long moduleId);
 
-        Task<ModuleOperate> GetModuleOperateById(int id);
+        Task<ModuleOperate> GetModuleOperateById(long id);
 
         Task<bool> CreateModuleOperateAsync(ModuleOperate moduleOperate);
 
@@ -28,9 +30,9 @@ namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
         #endregion
 
         #region 模块的数据列过滤器
-        //List<ModuleColumnFilter> GetColumnFilters(ref GridPager pager, int moduleId);
+        Task<List<ModuleColumnFilter>> GetColumnFiltersAsync(long moduleId);
 
-        Task<ModuleColumnFilter> GetColumnFilterById(int id);
+        Task<ModuleColumnFilter> GetColumnFilterById(long id);
 
         Task<bool> CreateColumnFilterAsync(ModuleColumnFilter columnFilter);
 

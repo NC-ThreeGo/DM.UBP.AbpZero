@@ -24,7 +24,7 @@
     <RestorePackages>true</RestorePackages>
     <UseGlobalApplicationHostFile />
     <TargetFrameworkProfile />
-    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
@@ -597,7 +597,10 @@
       <DependentUpon>_LoginAttemptsModal.css</DependentUpon>
     </Content>
     <Content Include="Areas\Mpa\Views\Users\_PermissionsModal.js" />
-    <Content Include="Areas\SysManage\Views\Dashboard\Index.js" />
+    <Content Include="Areas\SysManage\Views\Module\Index.js" />
+    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_CF.js" />
+    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_Opt.js" />
+    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal.js" />
     <Content Include="Common\Images\app-logo-small.png" />
     <Content Include="Common\Scripts\jquery-validation-custom.js" />
     <Content Include="Common\Images\open-id-connect.png" />
@@ -773,6 +776,94 @@
     <Content Include="libs\bootstrap-switch\css\bootstrap-switch.min.css" />
     <Content Include="libs\bootstrap-switch\js\bootstrap-switch.js" />
     <Content Include="libs\bootstrap-switch\js\bootstrap-switch.min.js" />
+    <Content Include="libs\bootstrap-table\bootstrap-table.css" />
+    <Content Include="libs\bootstrap-table\bootstrap-table.js" />
+    <Content Include="libs\bootstrap-table\extensions\accent-neutralise\bootstrap-table-accent-neutralise.js" />
+    <Content Include="libs\bootstrap-table\extensions\angular\bootstrap-table-angular.js" />
+    <Content Include="libs\bootstrap-table\extensions\auto-refresh\bootstrap-table-auto-refresh.css" />
+    <Content Include="libs\bootstrap-table\extensions\auto-refresh\bootstrap-table-auto-refresh.js" />
+    <Content Include="libs\bootstrap-table\extensions\click-edit-row\bootstrap-table-click-edit-row.css" />
+    <Content Include="libs\bootstrap-table\extensions\click-edit-row\bootstrap-table-click-edit-row.js" />
+    <Content Include="libs\bootstrap-table\extensions\cookie\bootstrap-table-cookie.js" />
+    <Content Include="libs\bootstrap-table\extensions\copy-rows\bootstrap-table-copy-rows.js" />
+    <Content Include="libs\bootstrap-table\extensions\editable\bootstrap-table-editable.js" />
+    <Content Include="libs\bootstrap-table\extensions\export\bootstrap-table-export.js" />
+    <Content Include="libs\bootstrap-table\extensions\filter-control\bootstrap-table-filter-control.css" />
+    <Content Include="libs\bootstrap-table\extensions\filter-control\bootstrap-table-filter-control.js" />
+    <Content Include="libs\bootstrap-table\extensions\filter\bootstrap-table-filter.js" />
+    <Content Include="libs\bootstrap-table\extensions\flat-json\bootstrap-table-flat-json.js" />
+    <Content Include="libs\bootstrap-table\extensions\group-by-v2\bootstrap-table-group-by.css" />
+    <Content Include="libs\bootstrap-table\extensions\group-by-v2\bootstrap-table-group-by.js" />
+    <Content Include="libs\bootstrap-table\extensions\group-by\bootstrap-table-group-by.css" />
+    <Content Include="libs\bootstrap-table\extensions\group-by\bootstrap-table-group-by.js" />
+    <Content Include="libs\bootstrap-table\extensions\i18n-enhance\bootstrap-table-i18n-enhance.js" />
+    <Content Include="libs\bootstrap-table\extensions\key-events\bootstrap-table-key-events.js" />
+    <Content Include="libs\bootstrap-table\extensions\mobile\bootstrap-table-mobile.js" />
+    <Content Include="libs\bootstrap-table\extensions\multi-column-toggle\bootstrap-table-multi-toggle.js" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-search\bootstrap-table-multiple-search.js" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-selection-row\bootstrap-table-multiple-selection-row.css" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-selection-row\bootstrap-table-multiple-selection-row.js" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-sort\bootstrap-table-multiple-sort.js" />
+    <Content Include="libs\bootstrap-table\extensions\natural-sorting\bootstrap-table-natural-sorting.js" />
+    <Content Include="libs\bootstrap-table\extensions\print\bootstrap-table-print.js" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-columns\bootstrap-table-reorder-columns.js" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-rows\bootstrap-table-reorder-rows.css" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-rows\bootstrap-table-reorder-rows.js" />
+    <Content Include="libs\bootstrap-table\extensions\resizable\bootstrap-table-resizable.js" />
+    <Content Include="libs\bootstrap-table\extensions\select2-filter\bootstrap-table-select2-filter.js" />
+    <Content Include="libs\bootstrap-table\extensions\sticky-header\bootstrap-table-sticky-header.css" />
+    <Content Include="libs\bootstrap-table\extensions\sticky-header\bootstrap-table-sticky-header.js" />
+    <Content Include="libs\bootstrap-table\extensions\toolbar\bootstrap-table-toolbar.js" />
+    <Content Include="libs\bootstrap-table\extensions\tree-column\bootstrap-table-tree-column.css" />
+    <Content Include="libs\bootstrap-table\extensions\tree-column\bootstrap-table-tree-column.js" />
+    <Content Include="libs\bootstrap-table\extensions\tree-column\icon.png" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-af-ZA.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ar-SA.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ca-ES.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-cs-CZ.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-da-DK.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-de-DE.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-el-GR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-en-US.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-AR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-CL.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-CR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-ES.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-MX.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-NI.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-es-SP.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-et-EE.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-eu-EU.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-fa-IR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-fr-BE.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-fr-FR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-he-IL.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-hr-HR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-hu-HU.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-id-ID.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-it-IT.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ja-JP.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ka-GE.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ko-KR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ms-MY.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-nb-NO.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-nl-NL.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-pl-PL.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-pt-BR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-pt-PT.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ro-RO.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ru-RU.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-sk-SK.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-sv-SE.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-th-TH.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-tr-TR.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-uk-UA.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-ur-PK.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-uz-Latn-UZ.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-vi-VN.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-zh-CN.js" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-zh-TW.js" />
+    <Content Include="libs\bootstrap-table\treegrid\bootstrap-table-treegrid.js" />
     <Content Include="libs\bootstrap\css\bootstrap-rtl.css" />
     <Content Include="libs\bootstrap\css\bootstrap-rtl.min.css" />
     <Content Include="libs\bootstrap\css\bootstrap.css" />
@@ -2201,6 +2292,7 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\jquery.signalR-2.2.2.js" />
     <Content Include="Scripts\jquery.signalR-2.2.2.min.js" />
+    <Content Include="test\treetable.html" />
     <Content Include="Views\Layout\_TenantCustomCss.cshtml" />
     <Content Include="libs\jquery-jtable\.npmignore" />
     <Content Include="libs\jquery-jtable\bower.json" />
@@ -2298,8 +2390,67 @@
     <Content Include="Areas\Mpa\Views\web.config" />
     <Content Include="Areas\Mpa\Views\Welcome\Index.cshtml" />
     <Content Include="Areas\SysManage\Views\web.config" />
-    <Content Include="Areas\SysManage\Views\Dashboard\Index.cshtml" />
     <Content Include="Areas\SysManage\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\SysManage\Views\Module\Index.cshtml" />
+    <Content Include="libs\bootstrap-table\extensions\accent-neutralise\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\accent-neutralise\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\auto-refresh\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\auto-refresh\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\click-edit-row\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\cookie\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\cookie\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\copy-rows\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\copy-rows\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\editable\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\editable\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\export\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\export\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\filter-control\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\filter-control\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\filter\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\filter\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\flat-json\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\flat-json\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\group-by-v2\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\group-by-v2\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\group-by\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\group-by\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\i18n-enhance\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\i18n-enhance\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\key-events\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\key-events\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\mobile\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\mobile\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\multi-column-toggle\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\multi-column-toggle\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-search\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-search\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-selection-row\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-selection-row\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-sort\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\multiple-sort\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\natural-sorting\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\natural-sorting\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\print\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-columns\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-columns\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-rows\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\reorder-rows\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\resizable\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\resizable\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\select2-filter\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\select2-filter\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\sticky-header\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\sticky-header\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\toolbar\extension.json" />
+    <Content Include="libs\bootstrap-table\extensions\toolbar\README.md" />
+    <Content Include="libs\bootstrap-table\extensions\tree-column\bootstrap-table-tree-column.less" />
+    <Content Include="libs\bootstrap-table\extensions\tree-column\extension.json" />
+    <Content Include="libs\bootstrap-table\locale\bootstrap-table-en-US.js.template" />
+    <Content Include="libs\bootstrap-table\locale\README.md" />
+    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal.cshtml" />
+    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_Opt.cshtml" />
+    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_CF.cshtml" />
     <None Include="Properties\PublishProfiles\aspnetzero - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
@@ -3058,6 +3209,7 @@
     <Content Include="Views\Account\Login.js" />
     <Content Include="Views\Account\_Layout-rtl.css" />
     <Content Include="Views\Error\_Layout.css" />
+    <Content Include="Areas\Mpa\Views\Layout\_IconList.js" />
     <Content Include="Views\TenantRegistration\Index.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -3127,7 +3279,7 @@
     <Compile Include="Areas\Mpa\Startup\MpaBundleConfig.cs" />
     <Compile Include="Areas\Mpa\Startup\MpaNavigationProvider.cs" />
     <Compile Include="Areas\Mpa\Startup\UserMenuItemExtensions.cs" />
-    <Compile Include="Areas\SysManage\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\SysManage\Controllers\ModuleController.cs" />
     <Compile Include="Areas\SysManage\SysManageAreaRegistration.cs" />
     <Compile Include="Auth\AuthenticationManagerExtensions.cs" />
     <Compile Include="Auth\SignInManager.cs" />
@@ -3288,6 +3440,7 @@
     <Content Include="Views\Account\_AppLogo.cshtml" />
     <Content Include="Views\Account\_TenantCustomCss.cshtml" />
     <Content Include="ubp.config" />
+    <Content Include="Areas\Mpa\Views\Layout\_IconList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

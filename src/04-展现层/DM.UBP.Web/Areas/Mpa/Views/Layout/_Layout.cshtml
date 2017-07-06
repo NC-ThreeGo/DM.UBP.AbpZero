@@ -59,7 +59,6 @@
 <!-- DOC: Apply "page-sidebar-reversed" class to put the sidebar on the right side -->
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 <body class="page-md page-header-fixed page-sidebar-closed-hide-logo">
-
     <div class="page-header navbar navbar-fixed-top md-shadow-zero-light">
         @Html.Action("Header", "Layout", new { area = "Mpa" })
     </div>
@@ -98,7 +97,7 @@
     @Html.IncludeScript(ScriptPaths.JQuery_JTable_Localization)
     @Html.IncludeScript(ScriptPaths.Bootstrap_Select_Localization)
     @Html.IncludeScript(ScriptPaths.JQuery_Timeago_Localization)
-   
+
     <script>
         abp.localization.defaultSourceName = '@LocalizationSourceName';
         moment.locale('@Thread.CurrentThread.CurrentUICulture.Name'); //Localizing moment.js
@@ -127,5 +126,6 @@
     }
 
     @RenderSection("Scripts", false)
+
 </body>
 </html>

@@ -19,7 +19,7 @@ namespace DM.UBP.Domain.Entity.SysManage.Authorization
         /// 如果为Null，则表示根模块
         /// </summary>
         [Display(Name = "上级ID")]
-        public long ParentId { set; get; }
+        public long? ParentId { set; get; }
         /// <summary>
         /// 编码
         /// </summary>

@@ -1,43 +1,55 @@
 ﻿var app = app || {};
-(function ($) {
+(function ($)
+{
 
     var _loadedScripts = [];
 
+    //定义_modalContentCssClass
+    var _modalContentCssClass;
+
     app.modals = app.modals || {};
 
-    app.ModalManager = (function () {
+    app.ModalManager = (function ()
+    {
 
-        var _normalizeOptions = function (options) {
-            if (!options.modalId) {
+        var _normalizeOptions = function (options)
+        {
+            if (!options.modalId)
+            {
                 options.modalId = 'Modal_' + (Math.floor((Math.random() * 1000000))) + new Date().getTime();
             }
         }
 
-        function _removeContainer(modalId) {
+        function _removeContainer(modalId)
+        {
             var _containerId = modalId + 'Container';
             var _containerSelector = '#' + _containerId;
 
             var $container = $(_containerSelector);
-            if ($container.length) {
+            if ($container.length)
+            {
                 $container.remove();
             }
         };
 
-        function _createContainer(modalId) {
+        function _createContainer(modalId)
+        {
             _removeContainer(modalId);
 
             var _containerId = modalId + 'Container';
+
             return $('<div id="' + _containerId + '"></div>')
                 .append(
-                    '<div id="' + modalId + '" class="modal fade" tabindex="-1" role="modal" aria-hidden="true">' +
-                    '  <div class="modal-dialog">' +
-                    '    <div class="modal-content"></div>' +
-                    '  </div>' +
-                    '</div>'
+                '<div id="' + modalId + '" class="modal fade" tabindex="-1" role="modal" aria-hidden="true">' +
+                '  <div class="modal-dialog">' +
+                '    <div class="' + _modalContentCssClass + '"></div>' +
+                '  </div>' +
+                '</div>'
                 ).appendTo('body');
         }
 
-        return function (options) {
+        return function (options)
+        {
 
             _normalizeOptions(options);
 
@@ -53,45 +65,56 @@
 
             var _onCloseCallbacks = [];
 
-            function _saveModal() {
-                if (_modalObject && _modalObject.save) {
+            function _saveModal()
+            {
+                if (_modalObject && _modalObject.save)
+                {
                     _modalObject.save();
                 }
             }
 
-            function _initAndShowModal() {
+            function _initAndShowModal()
+            {
                 _$modal = $(_modalSelector);
 
                 _$modal.modal({
                     backdrop: 'static'
                 });
 
-                _$modal.on('hidden.bs.modal', function () {
+                _$modal.on('hidden.bs.modal', function ()
+                {
                     _removeContainer(_modalId);
 
-                    for (var i = 0; i < _onCloseCallbacks.length; i++) {
+                    for (var i = 0; i < _onCloseCallbacks.length; i++)
+                    {
                         _onCloseCallbacks[i]();
                     }
                 });
 
-                _$modal.on('shown.bs.modal', function () {
+                _$modal.on('shown.bs.modal', function ()
+                {
                     _$modal.find('input:not([type=hidden]):first').focus();
                 });
 
                 var modalClass = app.modals[options.modalClass];
-                if (modalClass) {
+                if (modalClass)
+                {
                     _modalObject = new modalClass();
-                    if (_modalObject.init) {
+                    if (_modalObject.init)
+                    {
                         _modalObject.init(_publicApi, _args);
                     }
                 }
 
-                _$modal.find('.save-button').click(function () {
+                _$modal.find('.save-button').click(function ()
+                {
                     _saveModal();
                 });
 
-                _$modal.find('.modal-body').keydown(function (e) {
-                    if (e.which == 13) {
+                _$modal.find('.modal-body').keydown(function (e)
+                {
+                    if (e.which == 13)
+                    {
                         e.preventDefault();
                         _saveModal();
                     }
@@ -100,48 +123,69 @@
                 _$modal.modal('show');
             };
 
-            var _open = function (args, getResultCallback) {
+            var _open = function (args, getResultCallback)
+            {
 
                 _args = args || {};
                 _getResultCallback = getResultCallback;
 
+
+                //设置_modalContentCssClass的默认值为"modal-content"
+                _modalContentCssClass = "modal-content";
+                //指定modal-content的CssClass
+                if (typeof (options.modalContentCssClass) != "undefined")
+                {
+                    _modalContentCssClass = options.modalContentCssClass;
+                }
+
                 _createContainer(_modalId)
-                    .find('.modal-content')
-                    .load(options.viewUrl, _args, function (response, status, xhr) {
-                        if (status == "error") {
+                    .find('.' + _modalContentCssClass)
+                    .load(options.viewUrl, _args, function (response, status, xhr)
+                    {
+                        if (status == "error")
+                        {
                             abp.message.warn(abp.localization.abpWeb('InternalServerError'));
                             return;
                         };
 
-                        if (options.scriptUrl && _.indexOf(_loadedScripts, options.scriptUrl) < 0) {
+                        if (options.scriptUrl && _.indexOf(_loadedScripts, options.scriptUrl) < 0)
+                        {
                             $.getScript(options.scriptUrl)
-                                .done(function (script, textStatus) {
+                                .done(function (script, textStatus)
+                                {
                                     _loadedScripts.push(options.scriptUrl);
                                     _initAndShowModal();
                                 })
-                                .fail(function (jqxhr, settings, exception) {
+                                .fail(function (jqxhr, settings, exception)
+                                {
                                     abp.message.warn(abp.localization.abpWeb('InternalServerError'));
                                 });
-                        } else {
+                        } else
+                        {
                             _initAndShowModal();
                         }
                     });
             };
 
-            var _close = function() {
-                if (!_$modal) {
+            var _close = function ()
+            {
+                if (!_$modal)
+                {
                     return;
                 }
 
                 _$modal.modal('hide');
             };
 
-            var _onClose = function (onCloseCallback) {
+            var _onClose = function (onCloseCallback)
+            {
                 _onCloseCallbacks.push(onCloseCallback);
             }
 
-            function _setBusy(isBusy) {
-                if (!_$modal) {
+            function _setBusy(isBusy)
+            {
+                if (!_$modal)
+                {
                     return;
                 }
 
@@ -152,31 +196,37 @@
 
                 open: _open,
 
-                reopen: function() {
+                reopen: function ()
+                {
                     _open(_args);
                 },
 
                 close: _close,
 
-                getModalId: function () {
+                getModalId: function ()
+                {
                     return _modalId;
                 },
 
-                getModal: function () {
+                getModal: function ()
+                {
                     return _$modal;
                 },
 
-                getArgs: function () {
+                getArgs: function ()
+                {
                     return _args;
                 },
 
-                getOptions: function() {
+                getOptions: function ()
+                {
                     return _options;
                 },
 
                 setBusy: _setBusy,
 
-                setResult: function() {
+                setResult: function ()
+                {
                     _getResultCallback && _getResultCallback.apply(_publicApi, arguments);
                 },
 

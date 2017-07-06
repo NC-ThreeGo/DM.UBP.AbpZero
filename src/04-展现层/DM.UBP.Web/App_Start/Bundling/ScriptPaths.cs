@@ -78,6 +78,12 @@ namespace DM.UBP.Web.Bundling
         public const string Abp_Angular = "~/Abp/Framework/scripts/libs/angularjs/abp.ng.js";//SPA!
         public const string Abp_jTable = "~/Abp/Framework/scripts/libs/abp.jtable.js";
 
+        //bootstrap-table
+        public const string Bootstrap_Table = "~/libs/bootstrap-table/bootstrap-table.js";
+        //public const string Bootstrap_Table_TreeColumn = "~/libs/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.js";
+        public const string Bootstrap_Table_TreeGrid = "~/libs/bootstrap-table/treegrid/bootstrap-table-treegrid.js";
+
+
         public static string Angular_Localization
         {
             get

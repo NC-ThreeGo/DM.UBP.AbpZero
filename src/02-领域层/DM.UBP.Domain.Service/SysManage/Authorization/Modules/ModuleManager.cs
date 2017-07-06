@@ -7,7 +7,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
+namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
 {
     public class ModuleManager : DomainService, IModuleManagercs
     {
@@ -31,15 +31,21 @@ namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
         }
 
         #region 模块
-        public async Task<List<Module>> GetModules(long parentId)
+        public Task<List<Module>> GetAllModulesAsync()
         {
-            var modules = _moduleRepository.GetAll().Where(p => p.ParentId == parentId).OrderBy(p => p.Sort);
-            return await modules.ToListAsync();
+            var modules = _moduleRepository.GetAll().OrderBy(p => p.ParentId).ThenBy(p => p.Sort);
+            return Task.FromResult(modules.ToList());
         }
 
-        public Module GetModuleById(long id)
+        public Task<List<Module>> GetModulesAsync(long? parentId)
         {
-            return _moduleRepository.Get(id);
+            var modules = _moduleRepository.GetAll().Where(p => p.ParentId == parentId).OrderBy(p => p.Sort);
+            return Task.FromResult(modules.ToList());
+        }
+
+        public async Task<Module> GetModuleById(long id)
+        {
+            return await _moduleRepository.GetAsync(id);
         }
 
         public async Task<bool> CreateModuleAsync(Module module)
@@ -58,17 +64,14 @@ namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
         #endregion
 
         #region 模块的操作码
-        //public List<ModuleOperate> GetModuleOperates(ref GridPager pager, int moduleId)
-        //{
-        //    var moduleOperates = _moduleOperateRepository.GetAll().Where(p => p.ModuleId == moduleId);
-        //    pager.totalRows = moduleOperates.Count();
-        //    //排序
-        //    moduleOperates = LinqHelper.SortingAndPaging(moduleOperates, pager.sort, pager.order, pager.page, pager.rows);
+        public Task<List<ModuleOperate>> GetModuleOperatesAsync(long moduleId)
+        {
+            var moduleOperates = _moduleOperateRepository.GetAll().Where(p => p.ModuleId == moduleId).OrderBy(p => p.Sort);
 
-        //    return  moduleOperates.ToList();
-        //}
+            return Task.FromResult(moduleOperates.ToList());
+        }
 
-        public async Task<ModuleOperate>  GetModuleOperateById(int id)
+        public async Task<ModuleOperate>  GetModuleOperateById(long id)
         {
             return await _moduleOperateRepository.GetAsync(id);
         }
@@ -88,18 +91,14 @@ namespace TG.UBP.Domain.Core.SysManage.Authorization.Modules
         }
         #endregion
 
-        #region 模块的数据列过滤器
-        //public List<ModuleColumnFilter> GetColumnFilters(ref GridPager pager, int moduleId)
-        //{
-        //    var columnFilters = _columnFilterRepository.GetAll().Where(p => p.ModuleId == moduleId);
-        //    pager.totalRows = columnFilters.Count();
-        //    //排序
-        //    columnFilters = LinqHelper.SortingAndPaging(columnFilters, pager.sort, pager.order, pager.page, pager.rows);
+        #region 模块的列过滤器
+        public Task<List<ModuleColumnFilter>> GetColumnFiltersAsync(long moduleId)
+        {
+            var columnFilters = _columnFilterRepository.GetAll().Where(p => p.ModuleId == moduleId).OrderBy(p => p.Sort);
+            return Task.FromResult(columnFilters.ToList());
+        }
 
-        //    return columnFilters.ToList();
-        //}
-
-        public async Task<ModuleColumnFilter> GetColumnFilterById(int id)
+        public async Task<ModuleColumnFilter> GetColumnFilterById(long id)
         {
             return await _columnFilterRepository.GetAsync(id);
         }

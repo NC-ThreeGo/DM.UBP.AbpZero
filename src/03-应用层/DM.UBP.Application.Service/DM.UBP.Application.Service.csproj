@@ -137,6 +137,8 @@
     <Compile Include="SysManage\Auditing\NamespaceStripper.cs" />
     <Compile Include="SysManage\Authorization\AbpLoginResultTypeHelper.cs" />
     <Compile Include="SysManage\Authorization\LogInManager.cs" />
+    <Compile Include="SysManage\Authorization\Modules\IModuleAppService.cs" />
+    <Compile Include="SysManage\Authorization\Modules\ModuleAppService.cs" />
     <Compile Include="SysManage\Authorization\Permissions\IPermissionAppService.cs" />
     <Compile Include="SysManage\Authorization\Permissions\PermissionAppService.cs" />
     <Compile Include="SysManage\Authorization\Permissions\PermissionManagerExtensions.cs" />
