@@ -50,8 +50,8 @@
                     <div class="form-group form-md-line-input form-md-floating-label">
                         @*<input type="text" name="Icon" class="form-control@(Model.Icon.IsNullOrEmpty() ? "" : " edited")" value="@Model.Icon">*@
                         <label>@L("Icon")</label>
-                        <input value="fa fa-hand-pointer-o" name="Icon" id="Icon" type="hidden" />
-                        <div id="Iconic" title="点我选取图标" style="cursor:pointer" class="fa fa-hand-pointer-o"></div>
+                        <input value="@Model.Icon" name="Icon" id="Icon" type="hidden" />
+                        <div id="Iconic" title="点我选取图标" style="cursor:pointer" class="@Model.Icon"></div>
                     </div>
 
                     <div class="form-group form-md-line-input form-md-floating-label">

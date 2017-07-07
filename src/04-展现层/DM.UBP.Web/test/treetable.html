@@ -84,18 +84,16 @@
                         <table id="ModulesTable"
                                data-height="480"
                                data-pagination="true"
-                               data-url="/SysManage/Module/GetMenuList"
+                               data-url="/SysManage/Module/GetAllModuleList"
                                data-striped="true"
                                data-singleSelect="true"
                                data-clickToSelect="true"
                                data-resizable="true">
                             <thead>
                                 <tr>
-                                    <th data-field="state" data-checkbox="true"></th>
                                     <th data-field="Id">ID</th>
-                                    <th data-field="Name">菜单名称</th>
+                                    <th data-field="ModuleCode">菜单名称</th>
                                     <th data-field="Url">Url</th>
-                                    <th data-field="Level">级别</th>
                                     <th data-field="Sort">序号</th>
                                 </tr>
                             </thead>
@@ -154,7 +152,7 @@
     <script src="/libs/tether/js/tether.min.js"></script>
     <script src="/libs/bootstrap-table/bootstrap-table.js"></script>
     <!--<script src="/libs/bootstrap-table/extensions/tree-column/bootstrap-table-tree-column.js"></script>-->
-    <script src="/libs/bootstrap-table/treegrid/bootstrap-table-treegrid.js"></script>
+    <!--<script src="/libs/bootstrap-table/treegrid/bootstrap-table-treegrid.js"></script>-->
     <script src="/libs/bootstrap-table/extensions/resizable/bootstrap-table-resizable.js"></script>
     <script src="https://rawgit.com/wenzhixin/colResizable/master/source/colResizable-1.5.source.js"></script>
 
@@ -173,11 +171,11 @@
             });
 
             $('#ModulesTable').bootstrapTable({
-                treeView: true,
-                treeId: "Id",
-                treeField: "Name",
-                treeRootLevel: 1,
-                treeCollapseAll: true,
+            //    treeView: true,
+           //     treeId: "Id",
+           //     treeField: "Name",
+           //     treeRootLevel: 1,
+           //     treeCollapseAll: true,
             })
         });
     </script>

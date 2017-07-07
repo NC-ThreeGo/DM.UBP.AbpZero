@@ -1,6 +1,7 @@
 using Abp.Application.Services;
 using Abp.Application.Services.Dto;
 using DM.UBP.Application.Dto.SysManage.Authorization.Modules;
+using DM.UBP.Domain.Entity.SysManage.Authorization;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,6 +13,13 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
         Task<List<ModuleListDto>> GetAllModules();
 
         Task<List<ModuleListDto>> GetModules(long? parentId);
+
+        /// <summary>
+        /// 为导航获取模块列表，由于AutoMapper的初始化是在Nav初始化之后，所以不能使用Dto对象，只能直接返回实体类。
+        /// </summary>
+        /// <param name="parentId"></param>
+        /// <returns></returns>
+        Task<List<Module>> GetModulesForNav(long? parentId);
 
         Task<CreateModuleInput> GetModuleById(long id);
 

@@ -1,15 +1,19 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
+using DM.UBP.Application.Dto.SysManage.Authorization.Modules;
+using DM.UBP.Domain.Entity.SysManage.Authorization;
 using DM.UBP.Domain.Service;
 using DM.UBP.Domain.Service.SysManage.Authorization;
 using DM.UBP.Web.Navigation;
+using System.Collections.Generic;
+using TG.UBP.Domain.Service.SysManage.Authorization.Modules;
 
 namespace DM.UBP.Web.Areas.Mpa.Startup
 {
     public class MpaNavigationProvider : NavigationProvider
     {
         public const string MenuName = "Mpa";
-        
+
         public override void SetNavigation(INavigationProviderContext context)
         {
             var menu = context.Manager.Menus[MenuName] = new MenuDefinition(MenuName, new FixedLocalizableString("Main Menu"));

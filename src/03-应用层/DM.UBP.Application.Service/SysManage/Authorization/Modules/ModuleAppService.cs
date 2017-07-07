@@ -45,6 +45,16 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
             return moduleListDtos;
         }
 
+        /// <summary>
+        /// 为导航获取模块列表，由于AutoMapper的初始化是在Nav初始化之后，所以不能使用Dto对象，只能直接返回实体类。
+        /// </summary>
+        /// <param name="parentId"></param>
+        /// <returns></returns>
+        public async Task<List<Module>> GetModulesForNav(long? parentId)
+        {
+            return await _moduleManager.GetModulesAsync(parentId);
+        }
+
         public async Task<CreateModuleInput> GetModuleById(long id)
         {
             var module = await _moduleManager.GetModuleById(id);

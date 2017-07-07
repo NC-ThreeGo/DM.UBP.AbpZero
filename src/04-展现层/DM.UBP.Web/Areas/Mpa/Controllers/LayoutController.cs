@@ -54,7 +54,9 @@ namespace DM.UBP.Web.Areas.Mpa.Controllers
         {
             var sidebarModel = new SidebarViewModel
             {
-                Menu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync(MpaNavigationProvider.MenuName, AbpSession.ToUserIdentifier())),
+                //TODO: 加载用户授权范围内的菜单。
+                //Menu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync(MpaNavigationProvider.MenuName, AbpSession.ToUserIdentifier())),
+                Menu = AsyncHelper.RunSync(() => _userNavigationManager.GetMenuAsync(UbpNavigationProvider.MenuName, AbpSession.ToUserIdentifier())),
                 CurrentPageName = currentPageName
             };
 

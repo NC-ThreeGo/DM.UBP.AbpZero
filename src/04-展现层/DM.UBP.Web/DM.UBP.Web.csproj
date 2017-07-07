@@ -3277,6 +3277,7 @@
     <Compile Include="Areas\Mpa\Models\Users\UsersViewModel.cs" />
     <Compile Include="Areas\Mpa\MpaAreaRegistration.cs" />
     <Compile Include="Areas\Mpa\Startup\MpaBundleConfig.cs" />
+    <Compile Include="Areas\Mpa\Startup\UbpNavigationProvider.cs" />
     <Compile Include="Areas\Mpa\Startup\MpaNavigationProvider.cs" />
     <Compile Include="Areas\Mpa\Startup\UserMenuItemExtensions.cs" />
     <Compile Include="Areas\SysManage\Controllers\ModuleController.cs" />

@@ -312,5 +312,9 @@
         <text name="ColumnFilterInformations" value="列过滤器信息" />
         <text name="ColumnCode" value="列编码" />
         <text name="ColumnName" value="列名称" />
+
+        <text name="SysManage" value="系统管理" />
+        <text name="AuthorizationManage" value="权限管理" />
+        <text name="ModuleManager" value="模块管理" />
     </texts>
 </localizationDictionary>

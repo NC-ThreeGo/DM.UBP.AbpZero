@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
 {
-    public interface IModuleManagercs : IDomainService
+    public interface IModuleManagers : IDomainService
     {
         #region 模块
         Task<List<Module>> GetAllModulesAsync();

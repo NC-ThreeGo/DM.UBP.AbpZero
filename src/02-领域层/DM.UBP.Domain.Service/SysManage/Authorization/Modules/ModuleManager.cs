@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
 {
-    public class ModuleManager : DomainService, IModuleManagercs
+    public class ModuleManager : DomainService, IModuleManagers
     {
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 

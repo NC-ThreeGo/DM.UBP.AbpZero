@@ -35,12 +35,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Abp.2.0.2\lib\net46\Abp.dll</HintPath>
-    </Reference>
-    <Reference Include="Abp.AutoMapper, Version=2.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\Abp.AutoMapper.2.0.2\lib\net46\Abp.AutoMapper.dll</HintPath>
-    </Reference>
     <Reference Include="AutoMapper, Version=6.0.2.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\AutoMapper.6.0.2\lib\net45\AutoMapper.dll</HintPath>
     </Reference>
@@ -199,6 +193,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\aspnetboilerplate\src\Abp.AutoMapper\Abp.AutoMapper.csproj">
+      <Project>{7334aff5-cf42-4922-8f79-e74fcd8693a5}</Project>
+      <Name>Abp.AutoMapper</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\aspnetboilerplate\src\Abp\Abp.csproj">
+      <Project>{be9aca26-9c1b-4975-9aad-bdd48de84eb8}</Project>
+      <Name>Abp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\module-zero\src\Abp.Zero.Common\Abp.Zero.Common.csproj">
       <Project>{362af84e-4d6b-4a8b-a111-91620c1f1e50}</Project>
       <Name>Abp.Zero.Common</Name>

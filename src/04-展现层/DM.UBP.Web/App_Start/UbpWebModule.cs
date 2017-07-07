@@ -52,6 +52,9 @@ namespace DM.UBP.Web
             Configuration.Navigation.Providers.Add<FrontEndNavigationProvider>();
             Configuration.Navigation.Providers.Add<MpaNavigationProvider>();//MPA!
 
+            //加载UBP的导航菜单
+            Configuration.Navigation.Providers.Add<UbpNavigationProvider>();//Ubp!
+
             Configuration.Modules.AbpWebCommon().MultiTenancy.DomainFormat = WebUrlService.WebSiteRootAddress;
 
             //Uncomment these lines to use HangFire as background job manager.

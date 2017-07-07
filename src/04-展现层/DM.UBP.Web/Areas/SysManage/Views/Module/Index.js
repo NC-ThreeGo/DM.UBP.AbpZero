@@ -24,12 +24,13 @@
             url: '/SysManage/Module/GetAllModuleList',
             toolbar: '#toolbar',
             sidePagination: 'client',
-            cache: false,
+            cache: true,
+            height: 550,
 
-            pagination: true,
-            pageNumber: 1,
-            pageSize: 20,
-            pageList: [10, 25, 50, 100],
+            //pagination: true,
+            //pageNumber: 1,
+            //pageSize: 10,
+            //pageList: [10, 25, 50, 100],
 
             striped: true, //奇偶行是否区分
             singleSelect: true,//单选模式
@@ -57,7 +58,7 @@
                     $("#divColumnFilter :input").attr("disabled", false);
                     getModuleOpts();
                     getColumnFilters();
-}
+                }
             },
 
             rowStyle: function (row, index)
