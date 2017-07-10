@@ -8,7 +8,9 @@
 {
 
 <script type="text/javascript">
-    var moduleOptUpdatePerm = @(PageNames.App.Common.Module == "Administration.Module" ? "true" : "false");
+    @*var moduleOptUpdatePerm = @(PageNames.App.Common.Module == "Administration.Module" ? "true" : "false");*@
+    //生成当前视图对应的模块的所有操作码（权限）列表
+    @Html.Raw(ViewBag.AllOptJs)
 </script>
 
     @Html.IncludeScript("~/Areas/SysManage/Views/Module/Index.js")

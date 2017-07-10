@@ -58,11 +58,19 @@ namespace DM.UBP.Domain.Service.SysManage.Authorization
             return new LocalizableString(name, UbpConsts.LocalizationSourceName);
         }
 
+        /// <summary>
+        /// 权限表（abppermissions）的保存规则（Name字段）：
+        ///     模块：M_模块ID
+        ///     模块操作码：O_操作码ID
+        ///     列过滤器：C_列过滤器ID
+        /// </summary>
+        /// <param name="permission"></param>
+        /// <param name="moduleList"></param>
         private void CreateChildPermission(Permission permission, List<Module> moduleList)
         {
             foreach (Module module in moduleList)
             {
-                var perm = permission.CreateChildPermission(module.Id.ToString() + "_" + module.ModuleCode, L(module.ModuleCode));
+                var perm = permission.CreateChildPermission("M_" + module.Id.ToString(), L(module.ModuleCode));
                 if (!module.IsLast)
                 {
                     List<Module> childModuleList = _moduleManager.GetModulesAsync(module.Id).Result;
@@ -73,7 +81,7 @@ namespace DM.UBP.Domain.Service.SysManage.Authorization
                     List<ModuleOperate> moduleOperateList = _moduleManager.GetModuleOperatesAsync(module.Id).Result;
                     foreach(ModuleOperate opt in moduleOperateList)
                     {
-                        perm.CreateChildPermission(opt.Id.ToString() + "_" + module.ModuleCode + "." + opt.OperateCode, L(opt.OperateCode));
+                        perm.CreateChildPermission("O_" + opt.Id.ToString(), L(opt.OperateCode));
                     }
                 }
             }

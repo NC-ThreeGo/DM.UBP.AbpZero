@@ -67,16 +67,13 @@ namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        public async Task<string> GetModuleCodeByUrlAsync(string url)
+        public async Task<Module> GetModuleByUrlAsync(string url)
         {
             string urlDefaultAction = url;
             if (url.Substring(url.Length - 5, 5) == "Index")
                 urlDefaultAction = url.Substring(0, url.Length - 6);
             var module = await _moduleRepository.FirstOrDefaultAsync(p => p.Url == url || p.Url == urlDefaultAction);
-            if (module != null)
-                return module.ModuleCode;
-            else
-                return null;
+            return module;
         }
         #endregion
 

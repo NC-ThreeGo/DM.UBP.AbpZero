@@ -23,7 +23,7 @@ namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
         /// </summary>
         /// <param name="url"></param>
         /// <returns></returns>
-        Task<string> GetModuleCodeByUrlAsync(string url);
+        Task<Module> GetModuleByUrlAsync(string url);
         #endregion
 
         #region 模块的操作码

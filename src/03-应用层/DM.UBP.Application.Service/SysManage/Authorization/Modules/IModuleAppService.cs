@@ -26,11 +26,13 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
         Task<bool> CreateModule(CreateModuleInput input);
         Task<bool> UpdateModule(CreateModuleInput input);
 
-        Task<string> GetModuleCodeByUrl(string url);
+        Task<ModuleListDto> GetModuleByUrl(string url);
         #endregion
 
         #region Ä£¿éµÄ²Ù×÷Âë
         Task<PagedResultDto<ModuleOperateDto>> GetModuleOperates(GetModuleIdInput input);
+
+        Task<List<ModuleOperateDto>> GetModuleOperatesByModuleId(long moduleId);
 
         Task<ModuleOperateDto> GetModuleOperateById(long id);
 

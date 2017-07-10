@@ -277,7 +277,7 @@
                             visible: function ()
                             {
                                 //return _permissions.edit;
-                                return moduleOptUpdatePerm;
+                                return abp.auth.hasPermission(_optPerms.Edit);
                             },
                             action: function (data)
                             {

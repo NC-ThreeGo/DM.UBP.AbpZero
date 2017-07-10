@@ -97,9 +97,10 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
             return await _moduleManager.UpdateModuleAsync(module);
         }
 
-        public async Task<string> GetModuleCodeByUrl(string url)
+        public async Task<ModuleListDto> GetModuleByUrl(string url)
         {
-            return await _moduleManager.GetModuleCodeByUrlAsync(url);
+            var module = await _moduleManager.GetModuleByUrlAsync(url);
+            return module.MapTo<ModuleListDto>();
         }
         #endregion
 
@@ -113,6 +114,12 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
                 moduleOperates.Count,
                 moduleOperateListDtos
                 );
+        }
+
+        public async Task<List<ModuleOperateDto>> GetModuleOperatesByModuleId(long moduleId)
+        {
+            var moduleOperates = await _moduleManager.GetModuleOperatesAsync(moduleId);
+            return moduleOperates.MapTo<List<ModuleOperateDto>>();
         }
 
         public async Task<ModuleOperateDto> GetModuleOperateById(long id)
