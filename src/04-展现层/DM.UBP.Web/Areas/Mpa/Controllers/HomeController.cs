@@ -21,7 +21,7 @@ namespace DM.UBP.Web.Areas.Mpa.Controllers
             }
             else
             {
-                if (await IsGrantedAsync(AppPermissions.Pages_Tenant_Dashboard))
+                //if (await IsGrantedAsync(AppPermissions.Pages_Tenant_Dashboard))
                 {
                     return RedirectToAction("Index", "Dashboard");
                 }

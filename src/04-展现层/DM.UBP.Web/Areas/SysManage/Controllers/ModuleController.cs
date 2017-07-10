@@ -1,4 +1,5 @@
-﻿using Abp.Web.Models;
+﻿using Abp.Runtime.Caching;
+using Abp.Web.Models;
 using DM.UBP.Application.Dto.SysManage.Authorization.Modules;
 using DM.UBP.Application.Service.SysManage.Authorization.Modules;
 using DM.UBP.Web.Controllers;
@@ -11,11 +12,12 @@ using System.Web.Mvc;
 
 namespace DM.UBP.Web.Areas.SysManage.Controllers
 {
-    public class ModuleController : UbpControllerBase
+    public class ModuleController : UbpControllerBaseWithModuleCode
     {
         private IModuleAppService _moduleAppService;
 
-        public ModuleController(IModuleAppService moduleAppService)
+        public ModuleController(ICacheManager cacheManager, IModuleAppService moduleAppService)
+            :base(cacheManager, moduleAppService)
         {
             _moduleAppService = moduleAppService;
         }
@@ -23,6 +25,7 @@ namespace DM.UBP.Web.Areas.SysManage.Controllers
         // GET: SysManage/Module
         public ActionResult Index()
         {
+            ViewBag.CurrentPageName = GetModuleCode();
             return View();
         }
 
@@ -51,7 +54,8 @@ namespace DM.UBP.Web.Areas.SysManage.Controllers
                 ParentId = parentId,
                 Icon = "fa fa-puzzle-piece",
                 EnabledMark = true,
-                Sort = 0
+                Sort = 0,
+                MultiTenancySide = Abp.MultiTenancy.MultiTenancySides.Host | Abp.MultiTenancy.MultiTenancySides.Tenant,
             };
 
             return PartialView("_CreateOrEditModal", viewModel);

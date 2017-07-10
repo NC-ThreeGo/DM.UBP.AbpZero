@@ -165,6 +165,12 @@
                         }
                     }
                 },
+                {
+                    title: app.localize("MultiTenancySide"),
+                    field: 'MultiTenancySide',
+                    width: 40,
+                    halign: 'center',
+                },
             ]
         });
 

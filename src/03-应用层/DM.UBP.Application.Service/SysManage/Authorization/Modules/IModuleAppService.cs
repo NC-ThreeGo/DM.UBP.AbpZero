@@ -25,6 +25,8 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
 
         Task<bool> CreateModule(CreateModuleInput input);
         Task<bool> UpdateModule(CreateModuleInput input);
+
+        Task<string> GetModuleCodeByUrl(string url);
         #endregion
 
         #region Ä£¿éµÄ²Ù×÷Âë

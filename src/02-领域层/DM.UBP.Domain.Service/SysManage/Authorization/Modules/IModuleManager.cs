@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
 {
-    public interface IModuleManagers : IDomainService
+    public interface IModuleManager : IDomainService
     {
         #region 模块
         Task<List<Module>> GetAllModulesAsync();
@@ -17,6 +17,13 @@ namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
         Task<bool> CreateModuleAsync(Module module);
 
         Task<bool> UpdateModuleAsync(Module module);
+
+        /// <summary>
+        /// 根据URL获取模块编码
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        Task<string> GetModuleCodeByUrlAsync(string url);
         #endregion
 
         #region 模块的操作码

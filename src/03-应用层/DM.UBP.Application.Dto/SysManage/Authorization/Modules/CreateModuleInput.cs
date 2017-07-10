@@ -1,4 +1,5 @@
 using Abp.AutoMapper;
+using Abp.MultiTenancy;
 using DM.UBP.Domain.Entity.SysManage.Authorization;
 using System.ComponentModel.DataAnnotations;
 
@@ -40,6 +41,10 @@ namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
 
         [Display(Name = "是否最后一项")]
         public bool IsLast { get; set; }
+
+        [Display(Name = "多租户模式")]
+        [Required]
+        public MultiTenancySides MultiTenancySide { get; set; }
 
         /// <summary>
         /// 是否处于修改状态，如果Id有值则表示修改否则表示新增。

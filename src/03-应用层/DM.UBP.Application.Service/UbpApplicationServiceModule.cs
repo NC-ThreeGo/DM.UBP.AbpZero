@@ -13,7 +13,10 @@ namespace DM.UBP.Application.Service
         public override void PreInitialize()
         {
             //Adding authorization providers
-            Configuration.Authorization.Providers.Add<AppAuthorizationProvider>();
+            //Configuration.Authorization.Providers.Add<AppAuthorizationProvider>();
+
+            //注册Ubp Authorization Providers
+            Configuration.Authorization.Providers.Add<UbpAuthorizationProvider>();
 
             Configuration.Modules.AbpAutoMapper().Configurators.Add(mapper =>
             {

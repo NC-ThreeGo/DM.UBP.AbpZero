@@ -48,9 +48,9 @@ namespace DM.UBP.Web
             Configuration.Modules.Zero().LanguageManagement.EnableDbLocalization();
 
             //Configure navigation/menu
-            Configuration.Navigation.Providers.Add<AppNavigationProvider>();//SPA!
+            //Configuration.Navigation.Providers.Add<AppNavigationProvider>();//SPA!
             Configuration.Navigation.Providers.Add<FrontEndNavigationProvider>();
-            Configuration.Navigation.Providers.Add<MpaNavigationProvider>();//MPA!
+            //Configuration.Navigation.Providers.Add<MpaNavigationProvider>();//MPA!
 
             //加载UBP的导航菜单
             Configuration.Navigation.Providers.Add<UbpNavigationProvider>();//Ubp!

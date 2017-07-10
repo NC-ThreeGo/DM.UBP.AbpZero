@@ -108,8 +108,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SysManage\Authorization\UbpAuthorizationProvider.cs" />
     <Compile Include="UbpServiceBase.cs" />
-    <Compile Include="SysManage\Authorization\Modules\IModuleManagercs.cs" />
+    <Compile Include="SysManage\Authorization\Modules\IModuleManager.cs" />
     <Compile Include="SysManage\Authorization\Modules\ModuleManager.cs" />
     <Compile Include="SysManage\Folders\AppFolders.cs" />
     <Compile Include="SysManage\Folders\IAppFolders.cs" />

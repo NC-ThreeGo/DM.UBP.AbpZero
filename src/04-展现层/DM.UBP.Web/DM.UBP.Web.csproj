@@ -3290,6 +3290,7 @@
     <Compile Include="Chat\SignalR\SendFriendshipRequestInput.cs" />
     <Compile Include="Chat\SignalR\SignalRChatCommunicator.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\UbpControllerBaseWithModuleCode.cs" />
     <Compile Include="Controllers\UbpControllerBase.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />

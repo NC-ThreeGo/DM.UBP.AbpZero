@@ -74,7 +74,8 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
                 Sort = input.Sort,
                 Remark = input.Remark,
                 EnabledMark = input.EnabledMark,
-                IsLast = input.IsLast
+                IsLast = input.IsLast,
+                MultiTenancySide = input.MultiTenancySide,
             };
             return await _moduleManager.CreateModuleAsync(newModule);
         }
@@ -91,8 +92,14 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
             module.Remark = input.Remark;
             module.EnabledMark = input.EnabledMark;
             module.IsLast = input.IsLast;
+            module.MultiTenancySide = input.MultiTenancySide;
 
             return await _moduleManager.UpdateModuleAsync(module);
+        }
+
+        public async Task<string> GetModuleCodeByUrl(string url)
+        {
+            return await _moduleManager.GetModuleCodeByUrlAsync(url);
         }
         #endregion
 

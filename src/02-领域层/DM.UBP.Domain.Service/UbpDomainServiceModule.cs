@@ -82,11 +82,13 @@ namespace DM.UBP.Domain.Service
             {
                 cache.DefaultSlidingExpireTime = TimeSpan.FromMinutes(30);
             });
+
+            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
 
         public override void Initialize()
         {
-            IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+            //IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
 
         public override void PostInitialize()

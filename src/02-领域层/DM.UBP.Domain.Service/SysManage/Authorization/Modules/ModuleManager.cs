@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
 {
-    public class ModuleManager : DomainService, IModuleManagers
+    public class ModuleManager : DomainService, IModuleManager
     {
         private readonly IUnitOfWorkManager _unitOfWorkManager;
 
@@ -60,6 +60,23 @@ namespace TG.UBP.Domain.Service.SysManage.Authorization.Modules
             Module newModule = null;
             newModule = await _moduleRepository.UpdateAsync(module);
             return newModule != null;
+        }
+
+        /// <summary>
+        /// 根据URL获取模块编码
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public async Task<string> GetModuleCodeByUrlAsync(string url)
+        {
+            string urlDefaultAction = url;
+            if (url.Substring(url.Length - 5, 5) == "Index")
+                urlDefaultAction = url.Substring(0, url.Length - 6);
+            var module = await _moduleRepository.FirstOrDefaultAsync(p => p.Url == url || p.Url == urlDefaultAction);
+            if (module != null)
+                return module.ModuleCode;
+            else
+                return null;
         }
         #endregion
 

@@ -1,5 +1,6 @@
 ﻿using Abp.Domain.Entities;
 using Abp.Domain.Entities.Auditing;
+using Abp.MultiTenancy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -71,6 +72,11 @@ namespace DM.UBP.Domain.Entity.SysManage.Authorization
         [StringLength(StringMaxLengthConst.MaxStringLength200)]
         [Display(Name = "备注")]
         public string Remark { set; get; }
+
+        /// <summary>
+        /// 多租户的模式：1-Tenant、2-Host、3-Both（Tenant & Host）
+        /// </summary>
+        public MultiTenancySides MultiTenancySide { get; set; }
 
         /// <summary>
         /// 父级模块

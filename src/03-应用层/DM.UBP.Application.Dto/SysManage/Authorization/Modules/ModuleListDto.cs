@@ -1,5 +1,6 @@
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
+using Abp.MultiTenancy;
 using DM.UBP.Domain.Entity.SysManage.Authorization;
 using System.ComponentModel.DataAnnotations;
 
@@ -30,5 +31,8 @@ namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
         public bool EnabledMark { get; set; }
 
         public string Remark { get; set; }
+
+        [Required]
+        public MultiTenancySides MultiTenancySide { get; set; }
     }
 }

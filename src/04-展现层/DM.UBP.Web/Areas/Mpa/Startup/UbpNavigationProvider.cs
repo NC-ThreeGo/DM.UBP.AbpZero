@@ -30,22 +30,22 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     PageNames.App.Host.Tenants,
                     L("Tenants"),
                     url: "Mpa/Tenants",
-                    icon: "icon-globe",
-                    requiredPermissionName: AppPermissions.Pages_Tenants
+                    icon: "icon-globe"
+                    //,requiredPermissionName: AppPermissions.Pages_Tenants
                     )
                 ).AddItem(new MenuItemDefinition(
                     PageNames.App.Host.Editions,
                     L("Editions"),
                     url: "Mpa/Editions",
-                    icon: "icon-grid",
-                    requiredPermissionName: AppPermissions.Pages_Editions
+                    icon: "icon-grid"
+                    //,requiredPermissionName: AppPermissions.Pages_Editions
                     )
                 ).AddItem(new MenuItemDefinition(
                     PageNames.App.Tenant.Dashboard,
                     L("Dashboard"),
                     url: "Mpa/Dashboard",
-                    icon: "icon-home",
-                    requiredPermissionName: AppPermissions.Pages_Tenant_Dashboard
+                    icon: "icon-home"
+                    //,requiredPermissionName: AppPermissions.Pages_Tenant_Dashboard
                     )
                 );
 
