@@ -68,9 +68,10 @@ namespace DM.UBP.Domain.Service.SysManage.Authorization
         /// <param name="moduleList"></param>
         private void CreateChildPermission(Permission permission, List<Module> moduleList)
         {
+            //TODO：对多租户的支持。
             foreach (Module module in moduleList)
             {
-                var perm = permission.CreateChildPermission("M_" + module.Id.ToString(), L(module.ModuleCode));
+                var perm = permission.CreateChildPermission("M_" + module.Id.ToString(), L(module.ModuleCode), multiTenancySides: module.MultiTenancySide);
                 if (!module.IsLast)
                 {
                     List<Module> childModuleList = _moduleManager.GetModulesAsync(module.Id).Result;
@@ -81,7 +82,7 @@ namespace DM.UBP.Domain.Service.SysManage.Authorization
                     List<ModuleOperate> moduleOperateList = _moduleManager.GetModuleOperatesAsync(module.Id).Result;
                     foreach(ModuleOperate opt in moduleOperateList)
                     {
-                        perm.CreateChildPermission("O_" + opt.Id.ToString(), L(opt.OperateCode));
+                        perm.CreateChildPermission("O_" + opt.Id.ToString(), L(opt.OperateCode), multiTenancySides: module.MultiTenancySide);
                     }
                 }
             }

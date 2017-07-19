@@ -298,16 +298,16 @@
                 },
                 operateCode: {
                     title: app.localize('OperateCode'),
-                    width: '80',
+                    width: '100',
                     initialSortingDirection: 'DESC'
                 },
                 operateName: {
                     title: app.localize('OperateName'),
-                    width: '80'
+                    width: '100'
                 },
                 isValid: {
                     title: app.localize('IsValid'),
-                    width: '80',
+                    width: '60',
                     display: function (data)
                     {
                         if (data.record.isValid)
@@ -321,11 +321,11 @@
                 },
                 moduleId: {
                     title: app.localize('ModuleId'),
-                    width: '80'
+                    width: '60'
                 },
                 sort: {
                     title: app.localize('Sort'),
-                    width: '80'
+                    width: '60'
                 },
            }
         });

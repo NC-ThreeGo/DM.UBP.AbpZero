@@ -2,6 +2,7 @@
 @using Abp.Configuration
 @using Abp.Extensions
 @using Abp.Zero.Configuration
+@using Abp.Application.Services.Dto
 @using DM.UBP.Web.Areas.Mpa.Models.Common.Modals
 @model DM.UBP.Application.Dto.SysManage.Authorization.Modules.CreateModuleInput
 
@@ -85,7 +86,7 @@
                         </div>
 
                         <div class="form-group form-md-line-input form-md-floating-label">
-                            <input type="text" name="MultiTenancySide" class="form-control edited" value="@Model.MultiTenancySide">
+                            @Html.DropDownList("MultiTenancySide", Model.MultiTenancySidesCombox.Select(i => i.ToSelectListItem()), new { @class = "form-control edited" })
                             <label>@L("MultiTenancySide")</label>
                         </div>
                     </div>

@@ -1,6 +1,9 @@
+using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Abp.MultiTenancy;
 using DM.UBP.Domain.Entity.SysManage.Authorization;
+using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
@@ -44,7 +47,26 @@ namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
 
         [Display(Name = "多租户模式")]
         [Required]
-        public MultiTenancySides MultiTenancySide { get; set; }
+        public MultiTenancySides MultiTenancySide
+        {
+            get
+            {
+                foreach(ComboboxItemDto item in MultiTenancySidesCombox)
+                {
+                    if (item.IsSelected)
+                        return (MultiTenancySides)int.Parse(item.Value);
+                }
+                return MultiTenancySides.Host | MultiTenancySides.Tenant;
+            }
+            set
+            {
+                foreach (ComboboxItemDto item in MultiTenancySidesCombox)
+                {
+                    if ((MultiTenancySides)int.Parse(item.Value) == value)
+                        item.IsSelected = true;
+                }
+            }
+        }
 
         /// <summary>
         /// 是否处于修改状态，如果Id有值则表示修改否则表示新增。
@@ -52,6 +74,23 @@ namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
         public bool IsEditMode
         {
             get { return Id.HasValue; }
+        }
+
+
+        /// <summary>
+        /// 将枚举MultiTenancySides的值加载到Combox中，以便页面显示。
+        /// </summary>
+        public List<ComboboxItemDto> MultiTenancySidesCombox { get; set; }
+
+        public CreateModuleInput()
+        {
+            MultiTenancySidesCombox = new List<ComboboxItemDto>();
+            foreach (MultiTenancySides item in Enum.GetValues(typeof(MultiTenancySides)))
+            {
+                MultiTenancySidesCombox.Add(new ComboboxItemDto(((int)item).ToString(), item.ToString()));
+            }
+            //由于枚举MultiTenancySides是Flags，所以需要增加3-Both值，以表示选择两个值。
+            MultiTenancySidesCombox.Add(new ComboboxItemDto("3", "Both"));
         }
     }
 }

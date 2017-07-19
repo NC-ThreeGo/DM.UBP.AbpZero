@@ -32,17 +32,31 @@ namespace DM.UBP.Web
 
             app.UseOAuthBearerAuthentication(AccountController.OAuthBearerOptions);
 
+
+            //使应用程序可以使用 Cookie 来存储已登录用户的信息
+            //UseCookieAuthentication方法告诉ASP.NET Identity如何用Cookie去标识已认证的用户，
+            //  以及通过CookieAuthenticationOptions类指定的选项在哪儿。
+            //  这里重要的部分是LoginPath属性，它指定了一个URL，这是未认证客户端请求内容时要重定向的地址。
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Account/Login")
             });
 
+
+            //Use a cookie to temporarily store information about a user logging in with a third party login provider
+            //使应用程序可以使用cookie方式来存储第三方认证的信息
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
-            //You can remove these lines if you don't like to use two factor auth (while it has no problem if you don't remove)
+
+            //土牛：You can remove these lines if you don't like to use two factor auth (while it has no problem if you don't remove)
+            //使应用程序能够临时存储时，他们正在核实在双因素身份验证过程的第二个因素用户信息。
             app.UseTwoFactorSignInCookie(DefaultAuthenticationTypes.TwoFactorCookie, TimeSpan.FromMinutes(5));
+            //使应用程序能够记住第二次登录验证的因素，如电话或电子邮件。
+            //一旦选中此选项，在登录过程中验证的第二个步骤将是你从登录的设备记住。
+            //这是类似的，当你登录了rememberMe选项。
             app.UseTwoFactorRememberBrowserCookie(DefaultAuthenticationTypes.TwoFactorRememberBrowserCookie);
+
 
             if (IsTrue("ExternalAuth.Facebook.IsEnabled"))
             {
