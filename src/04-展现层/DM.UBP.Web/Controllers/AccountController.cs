@@ -137,7 +137,7 @@ namespace DM.UBP.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public virtual async Task<JsonResult> Login(LoginViewModel loginModel, string returnUrl = "", string returnUrlHash = "")
         {
             returnUrl = NormalizeReturnUrl(returnUrl);
