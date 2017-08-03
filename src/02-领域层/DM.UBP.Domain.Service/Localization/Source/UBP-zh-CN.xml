@@ -22,6 +22,7 @@
         <text name="CreateAnAccount" value="注册" />
         <text name="Pages" value="页面" />
         <text name="RoleName" value="角色名称" />
+        <text name="RoleCode" value="角色编码" />
         <text name="EditRole" value="修改角色" />
         <text name="CreateNewRole" value="添加角色" />
         <text name="RoleProperties" value="角色属性" />
@@ -292,7 +293,8 @@
         <text name="Remark" value="备注" />
         <text name="EnabledMark" value="有效" />
         <text name="IsLast" value="最后项" />
-        <text name="MultiTenancySide" value="多租户" />
+        <text name="IsMultiTenancyEnabled" value="支持多租户" />
+        <text name="MultiTenancySide" value="多租户模式" />
         <text name="CreateModule" value="新增模块" />
         <text name="EditModule" value="修改模块" />
         <text name="ModuleInformations" value="模块信息" />

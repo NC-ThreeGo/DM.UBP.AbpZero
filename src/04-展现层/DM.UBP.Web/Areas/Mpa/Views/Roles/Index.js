@@ -38,7 +38,8 @@
                     items: [{
                         text: app.localize('Edit'),
                         visible: function () {
-                            return _permissions.edit;
+                            return true;
+                            //return _permissions.edit;
                         },
                         action: function (data) {
                             _createOrEditModal.open({ id: data.record.id });

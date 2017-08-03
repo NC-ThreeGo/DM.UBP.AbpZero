@@ -71,7 +71,15 @@ namespace DM.UBP.Domain.Service.SysManage.Authorization
             //TODO：对多租户的支持。
             foreach (Module module in moduleList)
             {
-                var perm = permission.CreateChildPermission("M_" + module.Id.ToString(), L(module.ModuleCode), multiTenancySides: module.MultiTenancySide);
+                Permission perm = null;
+
+                //如果当前模块支持多租户，则直接取module.MultiTenancySide；
+                //如果当前模块不支持多租户，则multiTenancySides: _isMultiTenancyEnabled ? MultiTenancySides.Host : MultiTenancySides.Tenant
+                if (module.IsMultiTenancyEnabled)
+                    perm = permission.CreateChildPermission("M_" + module.Id.ToString(), L(module.ModuleCode), multiTenancySides: module.MultiTenancySide);
+                else
+                    perm = permission.CreateChildPermission("M_" + module.Id.ToString(), L(module.ModuleCode), multiTenancySides: _isMultiTenancyEnabled ? MultiTenancySides.Host : MultiTenancySides.Tenant);
+
                 if (!module.IsLast)
                 {
                     List<Module> childModuleList = _moduleManager.GetModulesAsync(module.Id).Result;

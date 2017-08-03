@@ -74,6 +74,12 @@ namespace DM.UBP.Domain.Entity.SysManage.Authorization
         public string Remark { set; get; }
 
         /// <summary>
+        /// 当前模块是否支持多租户模式，如果不支持，则在加载模块权限时：1）当前环境启用多租户，则权限的multiTenancySides=MultiTenancySides.Host
+        ///                                                             2）当前环境未启用多租户，则权限的multiTenancySides=MultiTenancySides.Tenant
+        /// </summary>
+        public bool IsMultiTenancyEnabled { get; set; }
+
+        /// <summary>
         /// 多租户的模式：1-Tenant、2-Host、3-Both（Tenant & Host）
         /// </summary>
         public MultiTenancySides MultiTenancySide { get; set; }

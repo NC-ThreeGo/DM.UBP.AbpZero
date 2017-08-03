@@ -27,6 +27,7 @@ namespace DM.UBP.Web.Areas.SysManage.Controllers
         {
             ViewBag.CurrentPageName = GetModuleCode();
             ViewBag.AllOptJs = GetAllOperatesJsScripForThisModule().Content;
+            ViewBag.OperatesDict = GetAllOperatesDict();
             return View();
         }
 

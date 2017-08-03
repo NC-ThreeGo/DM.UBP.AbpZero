@@ -8,7 +8,6 @@
 {
 
 <script type="text/javascript">
-    @*var moduleOptUpdatePerm = @(PageNames.App.Common.Module == "Administration.Module" ? "true" : "false");*@
     //生成当前视图对应的模块的所有操作码（权限）列表
     @Html.Raw(ViewBag.AllOptJs)
 </script>
@@ -33,8 +32,14 @@
                 </div>
                 <div class="col-xs-6 text-right">
                     <button id="ExportButton" class="btn btn-default"><i class="fa fa-file-excel-o"></i> @L("ExportToExcel")</button>
-                    <button id="CreateButton" class="btn btn-primary blue"><i class="fa fa-plus"></i> @L("Create")</button>
-                    <button id="EditButton" class="btn btn-primary blue"><i class="fa fa-plus"></i> @L("Edit")</button>
+                    @if (IsGranted(ViewBag.OperatesDict["Create"]))
+                    {
+                        <button id="CreateButton" class="btn btn-primary blue"><i class="fa fa-plus"></i> @L("Create")</button>
+                    }
+                    @if (IsGranted(ViewBag.OperatesDict["Edit"]))
+                    {
+                        <button id="EditButton" class="btn btn-primary blue"><i class="fa fa-plus"></i> @L("Edit")</button>
+                    }
                 </div>
             </div>
 

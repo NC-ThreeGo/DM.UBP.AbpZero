@@ -29,6 +29,6 @@
 
 
 按模块+功能建立子目录
-	BaseManage（基础管理）\Permission：权限管理，包括Module、User、Role、Tenant
+	SysManage（系统管理）\Permission：权限管理，包括Module、User、Role、Tenant
 						  \Identity：身份管理，包括组织、部门、岗位、职务、员工
 						  \OAuth

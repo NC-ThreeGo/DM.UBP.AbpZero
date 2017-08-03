@@ -57,9 +57,9 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
         {
             foreach (Module module in rootModuleList)
             {
-                //TODO：暂时将requiredPermissionName=null，等权限判断搞完后再赋值。
+                //TODO：暂时将requiredPermissionName=null，等权限判断搞完后再赋值。PermissionName格式：M_模块ID
                 var menuItem = new MenuItemDefinition(module.ModuleCode, L(module.ModuleCode), module.Icon,
-                    module.Url, requiredPermissionName: null); // module.Id.ToString());
+                    module.Url, requiredPermissionName: "M_" + module.Id.ToString()); // module.Id.ToString());
                 rootMenu.AddItem(menuItem);
                 List<Module> childModuleList = _moduleAppService.GetModulesForNav(module.Id).Result;
                 CreateMenuItem(menuItem, childModuleList);
@@ -71,7 +71,7 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
             foreach (Module module in moduleList)
             {
                 var menuItem = new MenuItemDefinition(module.ModuleCode, L(module.ModuleCode), module.Icon,
-                    module.Url, requiredPermissionName: null); // module.Id.ToString());
+                    module.Url, requiredPermissionName: "M_" + module.Id.ToString()); // module.Id.ToString());
                 parentMenuItem.AddItem(menuItem);
                 if (!module.IsLast)
                 {

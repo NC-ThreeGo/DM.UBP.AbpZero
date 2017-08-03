@@ -75,6 +75,7 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
                 Remark = input.Remark,
                 EnabledMark = input.EnabledMark,
                 IsLast = input.IsLast,
+                IsMultiTenancyEnabled = input.IsMultiTenancyEnabled,
                 MultiTenancySide = input.MultiTenancySide,
             };
             return await _moduleManager.CreateModuleAsync(newModule);
@@ -92,6 +93,7 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Modules
             module.Remark = input.Remark;
             module.EnabledMark = input.EnabledMark;
             module.IsLast = input.IsLast;
+            module.IsMultiTenancyEnabled = input.IsMultiTenancyEnabled;
             module.MultiTenancySide = input.MultiTenancySide;
 
             return await _moduleManager.UpdateModuleAsync(module);

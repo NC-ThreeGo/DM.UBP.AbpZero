@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace DM.UBP.Application.Service.SysManage.Tenants.Dashboard
 {
-    [AbpAuthorize(AppPermissions.Pages_Tenant_Dashboard)]
+    //[AbpAuthorize(AppPermissions.Pages_Tenant_Dashboard)]
     public class TenantDashboardAppService : UbpAppServiceBase, ITenantDashboardAppService
     {
         public GetMemberActivityOutput GetMemberActivity()

@@ -32,7 +32,9 @@ namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
 
         public string Remark { get; set; }
 
-        [Required]
+        public bool IsMultiTenancyEnabled { get; set; }
+
+        //[Required]
         public MultiTenancySides MultiTenancySide { get; set; }
     }
 }

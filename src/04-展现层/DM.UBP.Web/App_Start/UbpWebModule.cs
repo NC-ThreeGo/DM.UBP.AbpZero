@@ -15,6 +15,7 @@ using DM.UBP.EF;
 using DM.UBP.Web.App.Startup;//SPA!
 using DM.UBP.Web.Areas.Mpa.Startup;//MPA!
 using DM.UBP.Web.Bundling;
+using DM.UBP.Web.Mvc;
 using DM.UBP.Web.Navigation;
 using DM.UBP.Web.Routing;
 using DM.UBP.WebApi;
@@ -39,7 +40,9 @@ namespace DM.UBP.Web
         typeof(UbpWebApiModule),
         typeof(AbpWebSignalRModule),
         typeof(AbpRedisCacheModule), //AbpRedisCacheModule dependency can be removed if not using Redis cache
-        typeof(AbpHangfireModule))] //AbpHangfireModule dependency can be removed if not using Hangfire
+        typeof(AbpHangfireModule),
+        typeof(UbpWebMvcModule))
+        ] //AbpHangfireModule dependency can be removed if not using Hangfire
     public class UbpWebModule : AbpModule
     {
         public override void PreInitialize()

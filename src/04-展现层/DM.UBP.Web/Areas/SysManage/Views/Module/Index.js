@@ -166,6 +166,12 @@
                     }
                 },
                 {
+                    title: app.localize("IsMultiTenancyEnabled"),
+                    field: 'IsMultiTenancyEnabled',
+                    width: 40,
+                    halign: 'center',
+                },
+                {
                     title: app.localize("MultiTenancySide"),
                     field: 'MultiTenancySide',
                     width: 40,
@@ -288,7 +294,7 @@
                             visible: function ()
                             {
                                 //return _permissions.delete;
-                                return true;
+                                return abp.auth.hasPermission(_optPerms.Delete);
                             },
                             action: function (data)
                             {

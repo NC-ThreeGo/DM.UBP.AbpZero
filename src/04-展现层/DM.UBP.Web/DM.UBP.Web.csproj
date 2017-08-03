@@ -3563,6 +3563,10 @@
       <Project>{860cdc51-8364-486e-9982-284fe5ab0787}</Project>
       <Name>DM.UBP.Web.Controllers</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DM.UBP.Web.Mvc\DM.UBP.Web.Mvc.csproj">
+      <Project>{d8f8fd02-22db-47aa-9b4b-973819e28512}</Project>
+      <Name>DM.UBP.Web.Mvc</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DM.UBP.WebApi\DM.UBP.WebApi.csproj">
       <Project>{5eb52d3d-09fd-463a-b02a-8d9856bd3724}</Project>
       <Name>DM.UBP.WebApi</Name>

@@ -94,6 +94,7 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Roles
             Debug.Assert(input.Role.Id != null, "input.Role.Id should be set.");
 
             var role = await _roleManager.GetRoleByIdAsync(input.Role.Id.Value);
+            role.Name = input.Role.Name;
             role.DisplayName = input.Role.DisplayName;
             role.IsDefault = input.Role.IsDefault;
 
@@ -103,7 +104,7 @@ namespace DM.UBP.Application.Service.SysManage.Authorization.Roles
         [AbpAuthorize(AppPermissions.Pages_Administration_Roles_Create)]
         protected virtual async Task CreateRoleAsync(CreateOrUpdateRoleInput input)
         {
-            var role = new Role(AbpSession.TenantId, input.Role.DisplayName) { IsDefault = input.Role.IsDefault };
+            var role = new Role(AbpSession.TenantId, input.Role.Name, input.Role.DisplayName) { IsDefault = input.Role.IsDefault };
             CheckErrors(await _roleManager.CreateAsync(role));
             await CurrentUnitOfWork.SaveChangesAsync(); //It's done to get Id of the role.
             await UpdateGrantedPermissionsAsync(role, input.GrantedPermissionNames);

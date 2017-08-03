@@ -63,7 +63,8 @@
                         }, {
                             text: app.localize('Edit'),
                             visible: function () {
-                                return _permissions.edit;
+                                return true;
+                                //return _permissions.edit;
                             },
                             action: function (data) {
                                 _createOrEditModal.open({ id: data.record.id });
@@ -71,7 +72,8 @@
                         }, {
                             text: app.localize('Permissions'),
                             visible: function () {
-                                return _permissions.changePermissions;
+                                return true;
+                                //return _permissions.changePermissions;
                             },
                             action: function (data) {
                                 _userPermissionsModal.open({ id: data.record.id });

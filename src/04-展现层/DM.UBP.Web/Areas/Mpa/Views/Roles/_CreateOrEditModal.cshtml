@@ -30,6 +30,11 @@
                     }
 
                     <div class="form-group form-md-line-input form-md-floating-label">
+                        <input class="form-control@(Model.Role.Name.IsNullOrEmpty() ? "" : " edited")" type="text" name="Name" value="@Model.Role.Name" required maxlength="@Role.MaxNameLength">
+                        <label>@L("RoleCode")</label>
+                    </div>
+
+                    <div class="form-group form-md-line-input form-md-floating-label">
                         <input class="form-control@(Model.Role.DisplayName.IsNullOrEmpty() ? "" : " edited")" type="text" name="DisplayName" value="@Model.Role.DisplayName" required maxlength="@Role.MaxDisplayNameLength">
                         <label>@L("RoleName")</label>
                     </div>

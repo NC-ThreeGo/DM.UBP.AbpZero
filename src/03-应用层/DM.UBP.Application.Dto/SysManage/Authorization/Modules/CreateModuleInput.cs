@@ -45,8 +45,11 @@ namespace DM.UBP.Application.Dto.SysManage.Authorization.Modules
         [Display(Name = "是否最后一项")]
         public bool IsLast { get; set; }
 
+        [Display(Name = "支持多租户")]
+        public bool IsMultiTenancyEnabled { get; set; }
+
         [Display(Name = "多租户模式")]
-        [Required]
+        //[Required]
         public MultiTenancySides MultiTenancySide
         {
             get
