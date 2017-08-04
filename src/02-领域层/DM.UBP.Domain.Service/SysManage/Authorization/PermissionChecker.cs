@@ -19,14 +19,14 @@ namespace DM.UBP.Domain.Service.SysManage.Authorization
         }
 
         //TODO：需要修改成通过数据库判断是否有权限。
-        public override async Task<bool> IsGrantedAsync(string permissionName)
-        {
-            return true;
-        }
+        //public override async Task<bool> IsGrantedAsync(string permissionName)
+        //{
+        //    return true;
+        //}
 
-        public override async Task<bool> IsGrantedAsync(UserIdentifier user, string permissionName)
-        {
-            return true;
-        }
+        //public override async Task<bool> IsGrantedAsync(UserIdentifier user, string permissionName)
+        //{
+        //    return true;
+        //}
     }
 }

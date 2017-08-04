@@ -5,7 +5,7 @@
 @using DM.UBP.Web.Navigation
 @model DM.UBP.Web.Areas.Mpa.Models.Roles.RoleListViewModel
 @{
-		ViewBag.CurrentPageName = PageNames.App.Common.Roles;
+//ViewBag.CurrentPageName = PageNames.App.Common.Roles;
 }
 @section Styles
 {

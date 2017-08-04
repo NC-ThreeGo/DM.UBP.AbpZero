@@ -48,9 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SysManage\Authorization\ModuleColumnFilterConfiguration.cs" />
-    <Compile Include="SysManage\Authorization\ModuleConfiguration.cs" />
-    <Compile Include="SysManage\Authorization\ModuleOperateConfiguration.cs" />
     <Compile Include="SysManage\Authorization\UserConfiguration.cs" />
     <Compile Include="SysManage\BackgroundJob\BackgroundJobConfiguration.cs" />
     <Compile Include="SysManage\Chat\ChatMessageConfiguration.cs" />

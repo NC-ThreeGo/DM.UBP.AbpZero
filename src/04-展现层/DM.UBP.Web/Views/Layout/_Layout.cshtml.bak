@@ -50,6 +50,25 @@
         var abp = abp || {}; abp.appPath = '@ApplicationPath';
     </script>
 
+    <!--[if lt IE 9]>
+        <script src="~/libs/respond/respond.min.js"></script>
+    <![endif]-->
+    @Scripts.Render("~/Bundles/Frontend/libs/js")
+    <script type="text/javascript">
+        abp.localization.defaultSourceName = '@LocalizationSourceName';
+    </script>
+    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
+    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
+    @Scripts.Render("~/Bundles/Frontend/metronic/js")
+    @Scripts.Render("~/Bundles/Common/js")
+    <script type="text/javascript">
+        $(function ()
+        {
+            Layout.init();
+        });
+    </script>
+    @RenderSection("Scripts", false)
+
 </head>
 <body class="corporate">
 
@@ -62,31 +81,6 @@
     </div>
 
     @Html.Partial("~/Views/Layout/_Footer.cshtml")
-
-    <!--[if lt IE 9]>
-        <script src="~/libs/respond/respond.min.js"></script>
-    <![endif]-->
-
-    @Scripts.Render("~/Bundles/Frontend/libs/js")
-
-    <script type="text/javascript">
-        abp.localization.defaultSourceName = '@LocalizationSourceName';
-    </script>
-
-    <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
-    <script src="~/AbpScripts/GetScripts" type="text/javascript"></script>
-
-    @Scripts.Render("~/Bundles/Frontend/metronic/js")
-
-    @Scripts.Render("~/Bundles/Common/js")
-
-    <script type="text/javascript">
-        $(function () {
-            Layout.init();
-        });
-    </script>
-
-    @RenderSection("Scripts", false)
 
 </body>
 

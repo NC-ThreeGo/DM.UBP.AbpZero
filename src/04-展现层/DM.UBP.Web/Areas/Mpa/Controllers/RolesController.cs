@@ -1,7 +1,6 @@
 ﻿using Abp.Application.Services.Dto;
 using Abp.Runtime.Caching;
 using Abp.Web.Mvc.Authorization;
-using DM.UBP.Application.Service.SysManage.Authorization.Modules;
 using DM.UBP.Application.Service.SysManage.Authorization.Permissions;
 using DM.UBP.Application.Service.SysManage.Authorization.Roles;
 using DM.UBP.Domain.Service.SysManage.Authorization;
@@ -14,7 +13,7 @@ using System.Web.Mvc;
 namespace DM.UBP.Web.Areas.Mpa.Controllers
 {
     [AbpMvcAuthorize(AppPermissions.Pages_Administration_Roles)]
-    public class RolesController : UbpControllerBaseWithModuleCode
+    public class RolesController : UbpControllerBase
     {
         private readonly IRoleAppService _roleAppService;
         private readonly IPermissionAppService _permissionAppService;
@@ -22,9 +21,8 @@ namespace DM.UBP.Web.Areas.Mpa.Controllers
         public RolesController(
             IRoleAppService roleAppService,
             IPermissionAppService permissionAppService,
-            ICacheManager cacheManager, IModuleAppService moduleAppService
+            ICacheManager cacheManager
             )
-            : base(cacheManager, moduleAppService)
         {
             _roleAppService = roleAppService;
             _permissionAppService = permissionAppService;
@@ -32,8 +30,6 @@ namespace DM.UBP.Web.Areas.Mpa.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.CurrentPageName = GetModuleCode();
-
             var permissions = _permissionAppService.GetAllPermissions()
                                                    .Items
                                                    .Select(p => new ComboboxItemDto(p.Name, new string('-', p.Level * 2) + " " + p.DisplayName))

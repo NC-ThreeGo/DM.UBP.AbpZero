@@ -51,11 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysManage\Auditing\AuditLogListDto.cs" />
     <Compile Include="SysManage\Auditing\GetAuditLogsInput.cs" />
-    <Compile Include="SysManage\Authorization\Modules\CreateModuleInput.cs" />
-    <Compile Include="SysManage\Authorization\Modules\GetModuleOperateInput.cs" />
-    <Compile Include="SysManage\Authorization\Modules\ModuleColumnFilterDto.cs" />
-    <Compile Include="SysManage\Authorization\Modules\ModuleListDto.cs" />
-    <Compile Include="SysManage\Authorization\Modules\ModuleOperateDto.cs" />
     <Compile Include="SysManage\Authorization\Permissions\FlatPermissionDto.cs" />
     <Compile Include="SysManage\Authorization\Permissions\FlatPermissionWithLevelDto.cs" />
     <Compile Include="SysManage\Authorization\Roles\CreateOrUpdateRoleInput.cs" />

@@ -1,13 +1,8 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
-using DM.UBP.Application.Dto.SysManage.Authorization.Modules;
-using DM.UBP.Application.Service.SysManage.Authorization.Modules;
-using DM.UBP.Domain.Entity.SysManage.Authorization;
 using DM.UBP.Domain.Service;
-using DM.UBP.Domain.Service.SysManage.Authorization;
 using DM.UBP.Web.Navigation;
 using System.Collections.Generic;
-using TG.UBP.Domain.Service.SysManage.Authorization.Modules;
 
 namespace DM.UBP.Web.Areas.Mpa.Startup
 {
@@ -15,11 +10,10 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
     {
         public const string MenuName = "Ubp";
 
-        private IModuleAppService _moduleAppService;
+        //private IModuleAppService _moduleAppService;
 
-        public UbpNavigationProvider(IModuleAppService moduleAppService)
+        public UbpNavigationProvider()
         {
-            _moduleAppService = moduleAppService;
         }
 
         public override void SetNavigation(INavigationProviderContext context)
@@ -49,37 +43,37 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     )
                 );
 
-            List<Module> rootModuleList = _moduleAppService.GetModulesForNav(null).Result;
-            CreateRootMenuItem(menu, rootModuleList);
+            //List<Module> rootModuleList = _moduleAppService.GetModulesForNav(null).Result;
+            //CreateRootMenuItem(menu, rootModuleList);
         }
 
-        private void CreateRootMenuItem(MenuDefinition rootMenu, List<Module> rootModuleList)
-        {
-            foreach (Module module in rootModuleList)
-            {
-                //TODO：暂时将requiredPermissionName=null，等权限判断搞完后再赋值。PermissionName格式：M_模块ID
-                var menuItem = new MenuItemDefinition(module.ModuleCode, L(module.ModuleCode), module.Icon,
-                    module.Url, requiredPermissionName: "M_" + module.Id.ToString()); // module.Id.ToString());
-                rootMenu.AddItem(menuItem);
-                List<Module> childModuleList = _moduleAppService.GetModulesForNav(module.Id).Result;
-                CreateMenuItem(menuItem, childModuleList);
-            }
-        }
+        //private void CreateRootMenuItem(MenuDefinition rootMenu, List<Module> rootModuleList)
+        //{
+        //    foreach (Module module in rootModuleList)
+        //    {
+        //        //TODO：暂时将requiredPermissionName=null，等权限判断搞完后再赋值。PermissionName格式：M_模块ID
+        //        var menuItem = new MenuItemDefinition(module.ModuleCode, L(module.ModuleCode), module.Icon,
+        //            module.Url, requiredPermissionName: "M_" + module.Id.ToString()); // module.Id.ToString());
+        //        rootMenu.AddItem(menuItem);
+        //        List<Module> childModuleList = _moduleAppService.GetModulesForNav(module.Id).Result;
+        //        CreateMenuItem(menuItem, childModuleList);
+        //    }
+        //}
 
-        private void CreateMenuItem(MenuItemDefinition parentMenuItem, List<Module> moduleList)
-        {
-            foreach (Module module in moduleList)
-            {
-                var menuItem = new MenuItemDefinition(module.ModuleCode, L(module.ModuleCode), module.Icon,
-                    module.Url, requiredPermissionName: "M_" + module.Id.ToString()); // module.Id.ToString());
-                parentMenuItem.AddItem(menuItem);
-                if (!module.IsLast)
-                {
-                    List<Module> childModuleList = _moduleAppService.GetModulesForNav(module.Id).Result;
-                    CreateMenuItem(menuItem, childModuleList);
-                }
-            }
-        }
+        //private void CreateMenuItem(MenuItemDefinition parentMenuItem, List<Module> moduleList)
+        //{
+        //    foreach (Module module in moduleList)
+        //    {
+        //        var menuItem = new MenuItemDefinition(module.ModuleCode, L(module.ModuleCode), module.Icon,
+        //            module.Url, requiredPermissionName: "M_" + module.Id.ToString()); // module.Id.ToString());
+        //        parentMenuItem.AddItem(menuItem);
+        //        if (!module.IsLast)
+        //        {
+        //            List<Module> childModuleList = _moduleAppService.GetModulesForNav(module.Id).Result;
+        //            CreateMenuItem(menuItem, childModuleList);
+        //        }
+        //    }
+        //}
 
         private static ILocalizableString L(string name)
         {

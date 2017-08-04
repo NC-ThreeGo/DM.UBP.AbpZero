@@ -43,11 +43,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppVersionHelper.cs" />
-    <Compile Include="Authorization\IUbpAuthorizationHelper.cs" />
-    <Compile Include="Authorization\UbpAuthorizationHelper.cs" />
-    <Compile Include="Authorization\UbpAuthorizeAttribute.cs" />
-    <Compile Include="Authorization\UbpAuthorizeType.cs" />
-    <Compile Include="Authorization\IUbpAuthorizeAttribute.cs" />
     <Compile Include="Config\AbpZeroDbMigratorConfig.cs" />
     <Compile Include="Config\AbpZeroDbMigratorElement.cs" />
     <Compile Include="Config\DbContextInitializerConfig.cs" />

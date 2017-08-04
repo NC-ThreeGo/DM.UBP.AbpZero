@@ -4,7 +4,7 @@
 @using DM.UBP.Web.Navigation
 @model DM.UBP.Web.Areas.Mpa.Models.Users.UsersViewModel
 @{
-		ViewBag.CurrentPageName = PageNames.App.Common.Users;
+//ViewBag.CurrentPageName = PageNames.App.Common.Users;
 }
 @section Styles
 {

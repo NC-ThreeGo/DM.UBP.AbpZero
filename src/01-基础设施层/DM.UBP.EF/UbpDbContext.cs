@@ -20,13 +20,6 @@ namespace DM.UBP.EF
 
         public virtual IDbSet<ChatMessage> ChatMessages { get; set; }
 
-        /// <summary>
-        /// 模块
-        /// </summary>
-        //public virtual IDbSet<Module> Modules { get; set; }
-        //public virtual IDbSet<ModuleOperate> ModuleOperates { get; set; }
-        //public virtual IDbSet<ModuleColumnFilter> ColumnFilters { get; set; }
-
         //Example:
         //public virtual IDbSet<User> Users { get; set; }
 

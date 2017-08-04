@@ -15,7 +15,6 @@ using DM.UBP.EF;
 using DM.UBP.Web.App.Startup;//SPA!
 using DM.UBP.Web.Areas.Mpa.Startup;//MPA!
 using DM.UBP.Web.Bundling;
-using DM.UBP.Web.Mvc;
 using DM.UBP.Web.Navigation;
 using DM.UBP.Web.Routing;
 using DM.UBP.WebApi;
@@ -40,8 +39,7 @@ namespace DM.UBP.Web
         typeof(UbpWebApiModule),
         typeof(AbpWebSignalRModule),
         typeof(AbpRedisCacheModule), //AbpRedisCacheModule dependency can be removed if not using Redis cache
-        typeof(AbpHangfireModule),
-        typeof(UbpWebMvcModule))
+        typeof(AbpHangfireModule))
         ] //AbpHangfireModule dependency can be removed if not using Hangfire
     public class UbpWebModule : AbpModule
     {
@@ -53,10 +51,10 @@ namespace DM.UBP.Web
             //Configure navigation/menu
             //Configuration.Navigation.Providers.Add<AppNavigationProvider>();//SPA!
             Configuration.Navigation.Providers.Add<FrontEndNavigationProvider>();
-            //Configuration.Navigation.Providers.Add<MpaNavigationProvider>();//MPA!
+            Configuration.Navigation.Providers.Add<MpaNavigationProvider>();//MPA!
 
             //加载UBP的导航菜单
-            Configuration.Navigation.Providers.Add<UbpNavigationProvider>();//Ubp!
+            //Configuration.Navigation.Providers.Add<UbpNavigationProvider>();//Ubp!
 
             Configuration.Modules.AbpWebCommon().MultiTenancy.DomainFormat = WebUrlService.WebSiteRootAddress;
 

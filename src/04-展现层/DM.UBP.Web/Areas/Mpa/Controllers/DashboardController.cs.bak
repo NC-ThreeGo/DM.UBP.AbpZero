@@ -5,7 +5,7 @@ using System.Web.Mvc;
 
 namespace DM.UBP.Web.Areas.Mpa.Controllers
 {
-    [AbpMvcAuthorize(AppPermissions.Pages_Tenant_Dashboard)]
+    //[AbpMvcAuthorize(AppPermissions.Pages_Tenant_Dashboard)]
     public class DashboardController : UbpControllerBase
     {
         public ActionResult Index()

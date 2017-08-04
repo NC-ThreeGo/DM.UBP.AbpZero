@@ -597,10 +597,6 @@
       <DependentUpon>_LoginAttemptsModal.css</DependentUpon>
     </Content>
     <Content Include="Areas\Mpa\Views\Users\_PermissionsModal.js" />
-    <Content Include="Areas\SysManage\Views\Module\Index.js" />
-    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_CF.js" />
-    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_Opt.js" />
-    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal.js" />
     <Content Include="Common\Images\app-logo-small.png" />
     <Content Include="Common\Scripts\jquery-validation-custom.js" />
     <Content Include="Common\Images\open-id-connect.png" />
@@ -2391,7 +2387,6 @@
     <Content Include="Areas\Mpa\Views\Welcome\Index.cshtml" />
     <Content Include="Areas\SysManage\Views\web.config" />
     <Content Include="Areas\SysManage\Views\_ViewStart.cshtml" />
-    <Content Include="Areas\SysManage\Views\Module\Index.cshtml" />
     <Content Include="libs\bootstrap-table\extensions\accent-neutralise\extension.json" />
     <Content Include="libs\bootstrap-table\extensions\accent-neutralise\README.md" />
     <Content Include="libs\bootstrap-table\extensions\auto-refresh\extension.json" />
@@ -2448,9 +2443,6 @@
     <Content Include="libs\bootstrap-table\extensions\tree-column\extension.json" />
     <Content Include="libs\bootstrap-table\locale\bootstrap-table-en-US.js.template" />
     <Content Include="libs\bootstrap-table\locale\README.md" />
-    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal.cshtml" />
-    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_Opt.cshtml" />
-    <Content Include="Areas\SysManage\Views\Module\_CreateOrEditModal_CF.cshtml" />
     <None Include="Properties\PublishProfiles\aspnetzero - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.6.4-vsdoc.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
@@ -3280,7 +3272,6 @@
     <Compile Include="Areas\Mpa\Startup\UbpNavigationProvider.cs" />
     <Compile Include="Areas\Mpa\Startup\MpaNavigationProvider.cs" />
     <Compile Include="Areas\Mpa\Startup\UserMenuItemExtensions.cs" />
-    <Compile Include="Areas\SysManage\Controllers\ModuleController.cs" />
     <Compile Include="Areas\SysManage\SysManageAreaRegistration.cs" />
     <Compile Include="Auth\AuthenticationManagerExtensions.cs" />
     <Compile Include="Auth\SignInManager.cs" />
@@ -3290,7 +3281,6 @@
     <Compile Include="Chat\SignalR\SendFriendshipRequestInput.cs" />
     <Compile Include="Chat\SignalR\SignalRChatCommunicator.cs" />
     <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\UbpControllerBaseWithModuleCode.cs" />
     <Compile Include="Controllers\UbpControllerBase.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ApplicationController.cs" />
@@ -3563,10 +3553,6 @@
       <Project>{860cdc51-8364-486e-9982-284fe5ab0787}</Project>
       <Name>DM.UBP.Web.Controllers</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DM.UBP.Web.Mvc\DM.UBP.Web.Mvc.csproj">
-      <Project>{d8f8fd02-22db-47aa-9b4b-973819e28512}</Project>
-      <Name>DM.UBP.Web.Mvc</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DM.UBP.WebApi\DM.UBP.WebApi.csproj">
       <Project>{5eb52d3d-09fd-463a-b02a-8d9856bd3724}</Project>
       <Name>DM.UBP.WebApi</Name>
@@ -3576,6 +3562,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\SysManage\Controllers\" />
     <Folder Include="Areas\SysManage\Models\" />
     <Folder Include="Areas\SysManage\Views\Shared\" />
     <Folder Include="libs\jquery-jtable\dev\" />

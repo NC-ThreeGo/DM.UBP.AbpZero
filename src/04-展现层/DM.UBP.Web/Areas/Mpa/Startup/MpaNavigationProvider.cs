@@ -1,12 +1,8 @@
 ﻿using Abp.Application.Navigation;
 using Abp.Localization;
-using DM.UBP.Application.Dto.SysManage.Authorization.Modules;
-using DM.UBP.Domain.Entity.SysManage.Authorization;
 using DM.UBP.Domain.Service;
 using DM.UBP.Domain.Service.SysManage.Authorization;
 using DM.UBP.Web.Navigation;
-using System.Collections.Generic;
-using TG.UBP.Domain.Service.SysManage.Authorization.Modules;
 
 namespace DM.UBP.Web.Areas.Mpa.Startup
 {
@@ -48,13 +44,6 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     PageNames.App.Common.Administration,
                     L("Administration"),
                     icon: "icon-wrench"
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Common.Module,
-                        L("Modules"),
-                        url: "/SysManage/Module",
-                        icon: "icon-layers"
-                        //requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
-                        )
                     ).AddItem(new MenuItemDefinition(
                         PageNames.App.Common.OrganizationUnits,
                         L("OrganizationUnits"),
