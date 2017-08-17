@@ -36,73 +36,76 @@ namespace DM.UBP.Web.Areas.Mpa.Startup
                     icon: "icon-home",
                     requiredPermissionName: AppPermissions.Pages_Tenant_Dashboard
                     )
-                ).AddItem(new MenuItemDefinition(
-                    PageNames.App.Common.Administration,
-                    L("SysManage"),
-                    icon: "icon-home"
-                    ).AddItem(new MenuItemDefinition(
-                    PageNames.App.Common.Administration,
-                    L("Administration"),
-                    icon: "icon-wrench"
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Common.OrganizationUnits,
-                        L("OrganizationUnits"),
-                        url: "Mpa/OrganizationUnits",
-                        icon: "icon-layers",
-                        requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
-                        )
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Common.Roles,
-                        L("Roles"),
-                        url: "Mpa/Roles",
-                        icon: "icon-briefcase",
-                        requiredPermissionName: AppPermissions.Pages_Administration_Roles
-                        )
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Common.Users,
-                        L("Users"),
-                        url: "Mpa/Users",
-                        icon: "icon-users",
-                        requiredPermissionName: AppPermissions.Pages_Administration_Users
-                        )
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Common.Languages,
-                        L("Languages"),
-                        url: "Mpa/Languages",
-                        icon: "icon-flag",
-                        requiredPermissionName: AppPermissions.Pages_Administration_Languages
-                        )
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Common.AuditLogs,
-                        L("AuditLogs"),
-                        url: "Mpa/AuditLogs",
-                        icon: "icon-lock",
-                        requiredPermissionName: AppPermissions.Pages_Administration_AuditLogs
-                        )
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Host.Maintenance,
-                        L("Maintenance"),
-                        url: "Mpa/Maintenance",
-                        icon: "icon-wrench",
-                        requiredPermissionName: AppPermissions.Pages_Administration_Host_Maintenance
-                        )
-                    )
+                )
+                //.AddItem(new MenuItemDefinition(
+                //    PageNames.App.Common.Administration,
+                //    L("SysManage"),
+                //    icon: "icon-home"
+                //    )
                     .AddItem(new MenuItemDefinition(
-                        PageNames.App.Host.Settings,
-                        L("Settings"),
-                        url: "Mpa/HostSettings",
-                        icon: "icon-settings",
-                        requiredPermissionName: AppPermissions.Pages_Administration_Host_Settings
+                        PageNames.App.Common.Administration,
+                        L("Administration"),
+                        icon: "icon-wrench"
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Common.OrganizationUnits,
+                            L("OrganizationUnits"),
+                            url: "Mpa/OrganizationUnits",
+                            icon: "icon-layers",
+                            requiredPermissionName: AppPermissions.Pages_Administration_OrganizationUnits
+                            )
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Common.Roles,
+                            L("Roles"),
+                            url: "Mpa/Roles",
+                            icon: "icon-briefcase",
+                            requiredPermissionName: AppPermissions.Pages_Administration_Roles
+                            )
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Common.Users,
+                            L("Users"),
+                            url: "Mpa/Users",
+                            icon: "icon-users",
+                            requiredPermissionName: AppPermissions.Pages_Administration_Users
+                            )
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Common.Languages,
+                            L("Languages"),
+                            url: "Mpa/Languages",
+                            icon: "icon-flag",
+                            requiredPermissionName: AppPermissions.Pages_Administration_Languages
+                            )
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Common.AuditLogs,
+                            L("AuditLogs"),
+                            url: "Mpa/AuditLogs",
+                            icon: "icon-lock",
+                            requiredPermissionName: AppPermissions.Pages_Administration_AuditLogs
+                            )
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Host.Maintenance,
+                            L("Maintenance"),
+                            url: "Mpa/Maintenance",
+                            icon: "icon-wrench",
+                            requiredPermissionName: AppPermissions.Pages_Administration_Host_Maintenance
+                            )
                         )
-                    ).AddItem(new MenuItemDefinition(
-                        PageNames.App.Tenant.Settings,
-                        L("Settings"),
-                        url: "Mpa/Settings",
-                        icon: "icon-settings",
-                        requiredPermissionName: AppPermissions.Pages_Administration_Tenant_Settings
+                        .AddItem(new MenuItemDefinition(
+                            PageNames.App.Host.Settings,
+                            L("Settings"),
+                            url: "Mpa/HostSettings",
+                            icon: "icon-settings",
+                            requiredPermissionName: AppPermissions.Pages_Administration_Host_Settings
+                            )
+                        ).AddItem(new MenuItemDefinition(
+                            PageNames.App.Tenant.Settings,
+                            L("Settings"),
+                            url: "Mpa/Settings",
+                            icon: "icon-settings",
+                            requiredPermissionName: AppPermissions.Pages_Administration_Tenant_Settings
+                            )
                         )
-                    )
-                ));
+                //)
+                );
         }
 
         private static ILocalizableString L(string name)

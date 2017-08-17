@@ -1,8 +1,13 @@
 namespace DM.UBP.Web.Navigation
 {
-    public static class PageNames
+    /// <summary>
+    /// 定义菜单名称
+    ///     后续增加别的模块菜单时，1、新建PageNames.XXX.cs（XXX-模块名），然后在这个cs里参照下面的代码定义该模块的菜单名。
+    ///                             2、
+    /// </summary>
+    public static partial class PageNames
     {
-        public static class App
+        public static partial class App
         {
             public static class Common
             {
