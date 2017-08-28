@@ -62,6 +62,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeBuilderBase.cs" />
+    <Compile Include="EntityCodeBuilder.cs" />
     <Compile Include="Utils.cs" />
     <Compile Include="MainFrm.cs">
       <SubType>Form</SubType>

@@ -55,6 +55,7 @@
             this.rbNone = new System.Windows.Forms.RadioButton();
             this.cbPkType = new System.Windows.Forms.ComboBox();
             this.cbBaseClass = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -75,7 +76,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbCodeRootPath = new System.Windows.Forms.TextBox();
             this.cbTableName = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.btnConn = new System.Windows.Forms.Button();
             this.gbFields = new System.Windows.Forms.GroupBox();
@@ -88,8 +91,7 @@
             this.comments = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IsIdentity = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.IsPk = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbCodeRootPath = new System.Windows.Forms.TextBox();
+            this.Property = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbLP.SuspendLayout();
             this.gbDP.SuspendLayout();
             this.tpPage.SuspendLayout();
@@ -343,7 +345,7 @@
             this.tpPage.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tpPage.Name = "tpPage";
             this.tpPage.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tpPage.Size = new System.Drawing.Size(754, 769);
+            this.tpPage.Size = new System.Drawing.Size(754, 718);
             this.tpPage.TabIndex = 1;
             this.tpPage.Text = "Web";
             this.tpPage.UseVisualStyleBackColor = true;
@@ -356,6 +358,7 @@
             this.gbClass.Controls.Add(this.cbPkType);
             this.gbClass.Controls.Add(this.cbBaseClass);
             this.gbClass.Controls.Add(this.tbClassDesc);
+            this.gbClass.Controls.Add(this.label8);
             this.gbClass.Controls.Add(this.label5);
             this.gbClass.Controls.Add(this.label1);
             this.gbClass.Controls.Add(this.label16);
@@ -393,7 +396,7 @@
             // rbIMayHaveTenant
             // 
             this.rbIMayHaveTenant.AutoSize = true;
-            this.rbIMayHaveTenant.Location = new System.Drawing.Point(250, 394);
+            this.rbIMayHaveTenant.Location = new System.Drawing.Point(269, 394);
             this.rbIMayHaveTenant.Name = "rbIMayHaveTenant";
             this.rbIMayHaveTenant.Size = new System.Drawing.Size(209, 28);
             this.rbIMayHaveTenant.TabIndex = 19;
@@ -404,7 +407,7 @@
             // rbNone
             // 
             this.rbNone.AutoSize = true;
-            this.rbNone.Location = new System.Drawing.Point(125, 394);
+            this.rbNone.Location = new System.Drawing.Point(158, 394);
             this.rbNone.Name = "rbNone";
             this.rbNone.Size = new System.Drawing.Size(65, 28);
             this.rbNone.TabIndex = 19;
@@ -430,11 +433,26 @@
             // 
             this.cbBaseClass.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbBaseClass.FormattingEnabled = true;
+            this.cbBaseClass.Items.AddRange(new object[] {
+            "FullAuditedEntity",
+            "AuditedEntity",
+            "CreationAuditedEntity",
+            "Entity"});
             this.cbBaseClass.Location = new System.Drawing.Point(97, 275);
             this.cbBaseClass.Margin = new System.Windows.Forms.Padding(6);
             this.cbBaseClass.Name = "cbBaseClass";
             this.cbBaseClass.Size = new System.Drawing.Size(631, 32);
             this.cbBaseClass.TabIndex = 18;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(4, 396);
+            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(154, 24);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "多租户接口：";
             // 
             // label5
             // 
@@ -604,6 +622,7 @@
             this.btnCodeCreate.TabIndex = 0;
             this.btnCodeCreate.Text = "生成代码";
             this.btnCodeCreate.UseVisualStyleBackColor = true;
+            this.btnCodeCreate.Click += new System.EventHandler(this.btnCodeCreate_Click);
             // 
             // label4
             // 
@@ -641,6 +660,14 @@
             this.panel1.Size = new System.Drawing.Size(2247, 113);
             this.panel1.TabIndex = 9;
             // 
+            // tbCodeRootPath
+            // 
+            this.tbCodeRootPath.Location = new System.Drawing.Point(189, 15);
+            this.tbCodeRootPath.Margin = new System.Windows.Forms.Padding(6);
+            this.tbCodeRootPath.Name = "tbCodeRootPath";
+            this.tbCodeRootPath.Size = new System.Drawing.Size(2028, 35);
+            this.tbCodeRootPath.TabIndex = 16;
+            // 
             // cbTableName
             // 
             this.cbTableName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -651,6 +678,16 @@
             this.cbTableName.Size = new System.Drawing.Size(502, 32);
             this.cbTableName.TabIndex = 15;
             this.cbTableName.SelectedIndexChanged += new System.EventHandler(this.cbTableName_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 21);
+            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(178, 24);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "代码的根目录：";
             // 
             // label29
             // 
@@ -699,7 +736,8 @@
             this.Nullable,
             this.comments,
             this.IsIdentity,
-            this.IsPk});
+            this.IsPk,
+            this.Property});
             this.gvFields.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gvFields.Location = new System.Drawing.Point(6, 34);
             this.gvFields.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
@@ -765,23 +803,11 @@
             this.IsPk.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.IsPk.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // label7
+            // Property
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 21);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(178, 24);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "代码的根目录：";
-            // 
-            // tbCodeRootPath
-            // 
-            this.tbCodeRootPath.Location = new System.Drawing.Point(189, 15);
-            this.tbCodeRootPath.Margin = new System.Windows.Forms.Padding(6);
-            this.tbCodeRootPath.Name = "tbCodeRootPath";
-            this.tbCodeRootPath.Size = new System.Drawing.Size(2028, 35);
-            this.tbCodeRootPath.TabIndex = 16;
+            this.Property.HeaderText = "类中的属性名";
+            this.Property.Name = "Property";
+            this.Property.Width = 160;
             // 
             // MainFrm
             // 
@@ -795,6 +821,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "MainFrm";
             this.Text = "DM.UBP代码生成器";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainFrm_Load);
             this.gbLP.ResumeLayout(false);
             this.gbLP.PerformLayout();
@@ -869,6 +896,9 @@
         private System.Windows.Forms.TextBox tbModuleName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView gvFields;
+        private System.Windows.Forms.TextBox tbCodeRootPath;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn TYPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn LENGTH;
@@ -877,8 +907,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn comments;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsIdentity;
         private System.Windows.Forms.DataGridViewCheckBoxColumn IsPk;
-        private System.Windows.Forms.TextBox tbCodeRootPath;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Property;
     }
 }
 

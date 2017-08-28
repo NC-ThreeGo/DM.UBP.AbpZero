@@ -46,10 +46,21 @@ namespace DM.UBP.CodeBuilder
         /// </summary>
         public bool IsIdentity { get; set; }
 
+        /// <summary>
+        /// 是否
+        /// </summary>
         public bool Nullable { get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
         public string Comments { get; set; }
 
         public bool IsPk { get; set; }
+
+        /// <summary>
+        /// 实体类中的属性名
+        /// </summary>
+        public string Property { get; set; }
     }
 }
